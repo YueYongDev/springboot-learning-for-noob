@@ -1,0 +1,59 @@
+{
+  "title": "springboot-learning-for-noob",
+  "author": "YueYong",
+  "description": "给小白的第一本SpringBoot编程书",
+  "language": "zh-hans",
+  "plugins": [
+    "-lunr",
+    "-search",
+    "chapter-fold",
+    "splitter",
+    "page-toc-button",
+    "sectionx",
+    "hide-element",
+    "github",
+    "simple-page-toc",
+    "accordion",
+    "back-to-top-button",
+    "prism",
+    "-highlight",
+    "popup",
+    "lightbox",
+    "tbfed-pagefooter",
+    "image-captions",
+    "advanced-emoji",
+    "copy-code-button",
+    "todo"
+  ],
+  "pluginsConfig": {
+    "simple-page-toc": {
+      "maxDepth": 3,
+      "skipFirstH1": true
+    },
+    "prism": {
+      "css": ["prismjs/themes/prism-okaidia.css"]
+    },
+    "tbfed-pagefooter": {
+      "copyright": "",
+      "modify_label": "该文件最后修改时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "github": {
+      "url": "https://github.com/YueYongDev/springboot-learning-for-noob.git"
+    },
+    "hide-element": {
+      "elements": [".gitbook-link"]
+    },
+    "anchor-navigation-ex": {
+      "isShowTocTitleIcon": true
+    },
+    "sectionx": {
+      "tag": "b"
+    }
+  },
+  "links": {
+    "sidebar": {
+      "我的博客": "https://blog.liangyueyong.cn"
+    }
+  }
+}
