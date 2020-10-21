@@ -47,6 +47,9 @@
     "anchor-navigation-ex": {
       "isShowTocTitleIcon": true
     },
+    "image-captions": {
+      "caption": "_CAPTION_"
+    },
     "sectionx": {
       "tag": "b"
     }
