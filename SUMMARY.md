@@ -5,7 +5,7 @@
   - [1.1 知己知彼——SpringBoot 简介](doc/first/01.md)
   - [1.2 手把手带你搭建开发环境](doc/first/02.md)
   - [1.3 创建你的第一个 SpringBoot 项目](doc/first/03.md)
-  - [1.4 请求模拟工具 Postman 的使用](doc/first/04.md)
+  - [1.4 分析你的第一个 SpringBoot 项目](doc/first/04.md)
   - [1.5 小结与点评](doc/first/05.md)
 - [最常见的用法——探究 Restful API](doc/second/00.md)
   - [什么是 Restful API ](doc/second/01.md)
