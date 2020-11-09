@@ -23,7 +23,8 @@
     "image-captions",
     "advanced-emoji",
     "copy-code-button",
-    "todo"
+    "todo",
+    "valine"
   ],
   "pluginsConfig": {
     "simple-page-toc": {
@@ -52,6 +53,10 @@
     },
     "sectionx": {
       "tag": "b"
+    },
+    "valine": {
+      "appId": "U0W7ATmVTjBxWkHt96LR9Bj0-gzGzoHsz",
+      "appKey": "uko1Os2bkFSID34qVRrgjCcX"
     }
   },
   "links": {
