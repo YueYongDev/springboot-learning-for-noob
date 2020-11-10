@@ -24,7 +24,7 @@
     "advanced-emoji",
     "copy-code-button",
     "todo",
-    "valine"
+    "disqus"
   ],
   "pluginsConfig": {
     "simple-page-toc": {
@@ -54,9 +54,8 @@
     "sectionx": {
       "tag": "b"
     },
-    "valine": {
-      "appId": "U0W7ATmVTjBxWkHt96LR9Bj0-gzGzoHsz",
-      "appKey": "uko1Os2bkFSID34qVRrgjCcX"
+    "disqus": {
+      "shortName": "springboot-learning"
     }
   },
   "links": {
