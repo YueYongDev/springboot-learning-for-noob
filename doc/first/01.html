@@ -1,0 +1,518 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.1 知己知彼——SpringBoot 简介 · springboot-learning-for-noob</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="YueYong">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02.html" />
+    
+    
+    <link rel="prev" href="00.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://blog.liangyueyong.cn" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    启程——你的第一行 SpringBoot 代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    1.1 知己知彼——SpringBoot 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    1.2 手把手带你搭建开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    1.3 创建你的第一个 SpringBoot 项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    1.4 分析你的第一个 SpringBoot 项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    1.5 小结与点评
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../second/00.html">
+            
+                <a href="../second/00.html">
+            
+                    
+                    探究 Web 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../second/01.html">
+            
+                <a href="../second/01.html">
+            
+                    
+                    2.1 最常用的场景——RESTful API 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../second/02.html">
+            
+                <a href="../second/02.html">
+            
+                    
+                    2.2 使用 SpringBoot 构建 RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../second/03.html">
+            
+                <a href="../second/03.html">
+            
+                    
+                    2.3 前行必备——接口请求工具 Postman 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../second/04.html">
+            
+                <a href="../second/04.html">
+            
+                    
+                    2.4 FastJSON 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../second/05.html">
+            
+                <a href="../second/05.html">
+            
+                    
+                    2.5 使用 SpringBoot + Swagger2 构建一个 RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../second/06.html">
+            
+                <a href="../second/06.html">
+            
+                    
+                    2.6 RESTful API 的最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../second/07.html">
+            
+                <a href="../second/07.html">
+            
+                    
+                    2.7 小结与点评
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1.1 知己知彼——SpringBoot 简介</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="11-&#x77E5;&#x5DF1;&#x77E5;&#x5F7C;&#x2014;&#x2014;springboot-&#x7B80;&#x4ECB;">1.1 &#x77E5;&#x5DF1;&#x77E5;&#x5F7C;&#x2014;&#x2014;SpringBoot &#x7B80;&#x4ECB;</h1>
+<p>Spring &#x4ECE; 2003 &#x5E74;&#x9762;&#x4E16;&#x4EE5;&#x6765;&#x5DF2;&#x7ECF;&#x53D1;&#x5C55;&#x4E86; 5 &#x4E2A;&#x5927;&#x7248;&#x672C;&#x4E86;&#xFF0C;&#x5728;&#x8FD9;&#x5341;&#x51E0;&#x5E74;&#x7684;&#x53D1;&#x5C55;&#x65F6;&#x95F4;&#x91CC;&#xFF0C;Spring &#x793E;&#x533A;&#x4E3A;&#x5176;&#x5EFA;&#x7ACB;&#x4E86;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x3001;Spring &#x793E;&#x533A;&#x3001;&#x7B2C;&#x4E09;&#x65B9;&#x6846;&#x67B6;&#x4E4B;&#x95F4;&#x76F8;&#x4E92;&#x4F9D;&#x5B58;&#xFF0C;&#x5171;&#x540C;&#x63A8;&#x8FDB;&#x7740; Spring &#x793E;&#x533A;&#x7684;&#x84EC;&#x52C3;&#x53D1;&#x5C55;&#x3002;&#x4E0B;&#x81F3;&#x5355;&#x4F53;&#x5E94;&#x7528;&#xFF0C;&#x4E0A;&#x81F3;&#x5FAE;&#x670D;&#x52A1;&#xFF0C;Spring &#x90FD;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x5B8C;&#x5584;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x800C;&#x7EF4;&#x7CFB;&#x7740;&#x8FD9;&#x4E00;&#x5207;&#x7684;&#x57FA;&#x77F3;&#x4FBF;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x4E3B;&#x89D2;&#x2014;&#x2014;SpringBoot&#x3002;</p>
+<a href="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2lxcm117j31qi0sc0yu.jpg" data-lightbox="462f7e45-3fdc-4be8-a6d1-6f224a182c81" data-title="&#x56FE;1.1.1 Spring&#x5168;&#x5BB6;&#x6876;" target="_blank"><figure id="fig1.2.1.1"><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2lxcm117j31qi0sc0yu.jpg" alt="&#x56FE;1.1.1 Spring&#x5168;&#x5BB6;&#x6876;"><figcaption>&#x56FE;1.1.1 Spring&#x5168;&#x5BB6;&#x6876;</figcaption></figure></a>
+<h2 id="111-springboot-&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">1.1.1 SpringBoot &#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
+<p>SpringBoot &#x662F;&#x7531; Pivotal &#x56E2;&#x961F;&#x63D0;&#x4F9B;&#x7684;&#x5168;&#x65B0;&#x6846;&#x67B6;&#xFF0C;&#x5176;&#x8BBE;&#x8BA1;&#x76EE;&#x7684;&#x662F;&#x7528;&#x6765;<strong>&#x7B80;&#x5316;</strong>Spring &#x5E94;&#x7528;&#x7684;&#x521D;&#x59CB;&#x642D;&#x5EFA;&#x4EE5;&#x53CA;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x3002;&#x8BE5;&#x6846;&#x67B6;&#x4F7F;&#x7528;&#x4E86;&#x7279;&#x5B9A;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x6837;&#x677F;&#x5316;&#x7684;&#x914D;&#x7F6E;&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;SpringBoot &#x81F4;&#x529B;&#x4E8E;&#x5728;&#x84EC;&#x52C3;&#x53D1;&#x5C55;&#x7684;&#x5FEB;&#x901F;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#x9886;&#x57DF;&#xFF08;rapid application development&#xFF09;&#x6210;&#x4E3A;&#x9886;&#x5BFC;&#x8005;&#x3002;</p>
+<p>Boot &#x662F;&#x542F;&#x52A8;&#x7684;&#x610F;&#x601D;&#x3002;&#x4ECE;&#x540D;&#x5B57;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;SpringBoot &#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x542F;&#x52A8; Spring &#x9879;&#x76EE;&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x3002;&#x4ECE;&#x6700;&#x6839;&#x672C;&#x4E0A;&#x6765;&#x8BB2;&#xFF0C;SpringBoot &#x5C31;&#x662F;&#x4E00;&#x4E9B;&#x5E93;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5B83;&#x80FD;&#x591F;&#x88AB;&#x4EFB;&#x610F;&#x9879;&#x76EE;&#x7684;&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;&#x6240;&#x4F7F;&#x7528;&#x3002;</p>
+<h2 id="112-&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x51FA;&#x73B0;-springboot&#xFF1F;">1.1.2 &#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x51FA;&#x73B0; SpringBoot&#xFF1F;</h2>
+<p>&#x5728; SpringBoot &#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x7684;&#x90A3;&#x4E9B;&#x5E74;&#xFF0C;Web &#x540E;&#x7AEF;&#x7684;&#x4E16;&#x754C;&#x867D;&#x7136;&#x6709; Spring &#x8FD9;&#x6837;&#x7684;&#x524D;&#x8F88;&#x6311;&#x8D77;&#x5927;&#x6881;&#xFF0C;&#x4F46;&#x5176;&#x5E9E;&#x5927;&#x800C;&#x53C8;&#x590D;&#x6742;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x603B;&#x662F;&#x4F1A;&#x5413;&#x9000;&#x4E00;&#x7FA4;&#x60F3;&#x8981;&#x5B66;&#x4E60;&#x4ED6;&#x7684;&#x4EBA;&#xFF0C;&#x4E00;&#x4E2A;&#x5927;&#x7684;&#x9879;&#x76EE;&#x9664;&#x53BB;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x65B9;&#x9762;&#xFF0C;&#x53EF;&#x80FD;&#x53E6;&#x5916;&#x8FD8;&#x4F1A;&#x4F34;&#x968F;&#x7740;&#x4E0A;&#x767E;&#x4E0A;&#x5343;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;&#x518D;&#x540E;&#x6765;&#x968F;&#x7740; Spring3&#xFF0C;Spring4 &#x7684;&#x76F8;&#x7EE7;&#x63A8;&#x51FA;&#xFF0C;<strong>&#x7EA6;&#x5B9A;&#x5927;&#x4E8E;&#x914D;&#x7F6E;</strong>&#x9010;&#x6E10;&#x6210;&#x4E3A;&#x4E86;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x5171;&#x8BC6;&#xFF0C;&#x5927;&#x5BB6;&#x4E5F;&#x6E10;&#x6E10;&#x7684;&#x4ECE;&#x5199; xml &#x8F6C;&#x4E3A;&#x5199;&#x5404;&#x79CD;&#x6CE8;&#x89E3;&#xFF0C;&#x5728; spring4 &#x7684;&#x9879;&#x76EE;&#x91CC;&#xFF0C;&#x4F60;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x4E00;&#x884C; xml &#x90FD;&#x4E0D;&#x5199;&#x3002;</p>
+<p>&#x53EF;&#x5373;&#x4F7F;&#x662F;&#x8FD9;&#x6837;&#xFF0C;&#x5728; Golang&#x3001;Node.js &#x7B49;&#x540E;&#x671F;&#x4E4B;&#x79C0;&#x7684;&#x773C;&#x4E2D;&#xFF0C;Spring &#x4ECD;&#x7136;&#x662F;&#x4E00;&#x526F;&#x8001;&#x6001;&#x9F99;&#x949F;&#x7684;&#x6837;&#x5B50;&#xFF0C;&#x8D8A;&#x6765;&#x8D8A;&#x7B28;&#x91CD;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;SpringBoot &#x4F34;&#x968F;&#x7740; Spring4 &#x4E00;&#x8D77;&#x51FA;&#x73B0;&#x4E86;&#x3002;</p>
+<h2 id="113-springmvc-or-springboot&#xFF1F;">1.1.3 SpringMVC or SpringBoot&#xFF1F;</h2>
+<p>&#x63D0;&#x8D77; Spring&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x7684;&#x7B2C;&#x4E00;&#x60F3;&#x6CD5;&#x662F; SpringMVC&#xFF0C;&#x4F46;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;Spring MVC &#x53EA;&#x662F; Spring &#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x662F;&#x4E00;&#x4E2A; web &#x6846;&#x67B6;&#x3002;&#x901A;&#x8FC7; <code>Dispatcher Servlet</code>, <code>ModelAndView</code> &#x548C; <code>View Resolver</code> &#x7B49;&#x65B9;&#x5F0F;&#x7B80;&#x5316;&#x4E86; Web &#x5E94;&#x7528;&#x7684;&#x5F00;&#x53D1;&#xFF0C;&#x4E3B;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x662F;&#x7F51;&#x7AD9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6216;&#x8005;&#x670D;&#x52A1;&#x5F00;&#x53D1;&#x7B49;&#x65B9;&#x9762;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5305;&#x62EC;<strong>URL &#x8DEF;&#x7531;&#x3001;Session&#x3001;&#x6A21;&#x677F;&#x5F15;&#x64CE;&#x3001;&#x9759;&#x6001; Web &#x8D44;&#x6E90;</strong>&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x800C; SpringBoot &#x5B9E;&#x73B0;&#x4E86;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#xFF0C;&#x964D;&#x4F4E;&#x4E86;&#x9879;&#x76EE;&#x642D;&#x5EFA;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x3002;&#x672C;&#x6587;&#x5F00;&#x7BC7;&#x8BF4;&#x8FC7;&#xFF0C;SpringBoot &#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x542F;&#x52A8; Spring &#x9879;&#x76EE;&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#xFF0C;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x5305;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x7528;&#x56FE;1.1.2&#x52A0;&#x5F3A;&#x7406;&#x89E3;&#xFF0C;&#x751F;&#x4EA7;&#x679C;&#x6C41;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x4E1A;&#x52A1;&#xFF0C;&#x6C34;&#x679C;&#x4EE3;&#x8868;&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x9700;&#x6C42;&#xFF0C;&#x6C34;&#x3001;&#x7CD6;&#x3001;&#x5976;&#x3001;&#x7B49;&#x7B49;&#x914D;&#x6599;&#x662F;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x4EE5;&#x524D;&#xFF0C;&#x4F60;&#x4E0D;&#x4EC5;&#x8981;&#x5B9E;&#x73B0;&#x4E1A;&#x52A1;&#x9700;&#x6C42;&#xFF0C;&#x8FD8;&#x8981;&#x81EA;&#x5DF1;&#x914D;&#x7F6E;&#x3002;&#x800C; SpringBoot &#x505A;&#x5230;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#xFF0C;&#x8BA9;&#x4F60;&#x817E;&#x51FA;&#x7CBE;&#x529B;&#x548C;&#x65F6;&#x95F4;&#x66F4;&#x591A;&#x7684;&#x53BB;&#x5173;&#x5FC3;&#x6838;&#x5FC3;&#x4E1A;&#x52A1;&#x3002;</p>
+<a href="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2msh3ay4g30k00gon51.gif" data-lightbox="d83391d1-b451-4e12-b27f-ed72139b608c" data-title="&#x56FE;1.1.2 Spring&#x4E0E;SpringBoot&#x7684;&#x5173;&#x7CFB;" target="_blank"><figure id="fig1.2.1.2"><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2msh3ay4g30k00gon51.gif" alt="&#x56FE;1.1.2 Spring&#x4E0E;SpringBoot&#x7684;&#x5173;&#x7CFB;"><figcaption>&#x56FE;1.1.2 Spring&#x4E0E;SpringBoot&#x7684;&#x5173;&#x7CFB;</figcaption></figure></a>
+<p>&#x6211;&#x4EEC;&#x7528;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x7406;&#x89E3;&#x8FD9;&#x51E0;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF1A;</p>
+<blockquote>
+<p>Spring &#x662F;&#x7075;&#x9B42;&#xFF0C;SpringBoot &#x662F;&#x9AA8;&#x67B6;&#xFF0C;&#x800C; Spring &#x5BB6;&#x7684;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#xFF08;&#x4F8B;&#x5982; SpringMVC&#xFF09;&#x5C31;&#x662F;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x4EBA;&#x7684;&#x5404;&#x4E2A;&#x810F;&#x5668;&#x3002;</p>
+</blockquote>
+<p>&#x56E0;&#x6B64;&#xFF0C;SpringBoot &#x548C; SpringMVC &#x662F;&#x4E24;&#x4E2A;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<h2 id="114-&#x6211;&#x9700;&#x8981;&#x5148;&#x5B66;&#x4E60;-springmvc-&#x624D;&#x80FD;&#x5B66;&#x4E60;-springboot-&#x5417;&#xFF1F;">1.1.4 &#x6211;&#x9700;&#x8981;&#x5148;&#x5B66;&#x4E60; SpringMVC &#x624D;&#x80FD;&#x5B66;&#x4E60; SpringBoot &#x5417;&#xFF1F;</h2>
+<p>&#x4ECE;&#x6211;&#x4E2A;&#x4EBA;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C;&#x6211;&#x5EFA;&#x8BAE;&#x521D;&#x5B66;&#x8005;&#x7684;&#x5B66;&#x4E60;&#x5148;&#x4ECE;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x5F00;&#x59CB;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x5E94;&#x7528;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x518D;&#x9010;&#x6E10;&#x4E86;&#x89E3;&#x539F;&#x7406;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x6211;&#x662F;&#x63A8;&#x8350;&#x76F4;&#x63A5;&#x5B66; SpringBoot &#x7684;&#xFF0C;&#x56E0;&#x4E3A; SpringBoot &#x6709;&#x4E00;&#x5957;&#x5148;&#x8FDB;&#x7701;&#x4E8B;&#x7684;&#x5DE5;&#x5177;&#x94FE;&#xFF0C;&#x4ECE;&#x56FE; 1.1.3 &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4E00;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x548C; SpringBoot &#x9644;&#x5E26;&#x7684;&#x4E00;&#x4E9B;&#x5DE5;&#x5177;&#x94FE;&#x548C; Sample &#x6253;&#x4EA4;&#x9053;&#x3002;&#x5982;&#x679C;&#x662F;&#x521D;&#x5B66;&#x8005;&#xFF0C;&#x4F60;&#x5F88;&#x5FEB;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; SpringBoot &#x642D;&#x5EFA;&#x8D77;&#x4E00;&#x4E2A;&#x5C0F;&#x5E94;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x76F4;&#x89C2;&#x7684;&#x770B;&#x5230;&#x7ED3;&#x679C;&#xFF0C;&#x5B66;&#x4E60;&#x4F53;&#x9A8C;&#x4F1A;&#x5F88;&#x597D;&#x3002;</p>
+<a href="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2n5e8i8nj30ci09edgt.jpg" data-lightbox="f4cc4e27-2ea0-474d-a005-d95d41b2d1b6" data-title="&#x56FE;1.1.3 SpringBoot&#x7EC4;&#x6210;" target="_blank"><figure id="fig1.2.1.3"><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2n5e8i8nj30ci09edgt.jpg" alt="&#x56FE;1.1.3 SpringBoot&#x7EC4;&#x6210;"><figcaption>&#x56FE;1.1.3 SpringBoot&#x7EC4;&#x6210;</figcaption></figure></a>
+<p>&#x4F46;&#x662F;&#x7528;&#x5230;&#x6BD4;&#x8F83;&#x719F;&#x7EC3;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x662F;&#x56DE;&#x5934;&#x518D;&#x770B;&#x4E00;&#x770B; Spring&#x3002;&#x867D;&#x7136; SpringBoot &#x786E;&#x5B9E;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#x3002; &#x4F46;&#x662F;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x5374;&#x4E0D;&#x592A;&#x5BB9;&#x6613;&#x9886;&#x4F1A; Spring &#x7684;&#x539F;&#x7406;&#x3002; &#x800C;&#x539F;&#x751F;&#x6001;&#x7684; Spring &#x5728;&#x4F7F;&#x7528;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5168;&#x6CE8;&#x89E3;&#xFF0C;&#x8FD8;&#x662F;&#x66F4;&#x65E9;&#x7684; xml &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002; &#x90FD;&#x4F1A;&#x8BA9;&#x4F60;&#x5728;&#x4E0D;&#x77E5;&#x4E0D;&#x89C9;&#x4E2D;&#x9886;&#x4F1A; Spring &#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x548C;&#x5185;&#x90E8;&#x673A;&#x5236;&#x3002;</p>
+<p>&#x597D;&#x4E86;&#xFF0C;&#x7EAF;&#x7406;&#x8BBA;&#x7684;&#x4E1C;&#x897F;&#x5C31;&#x4ECB;&#x7ECD;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x77E5;&#x9053;&#x4F60;&#x5DF2;&#x7ECF;&#x8FEB;&#x4E0D;&#x53CA;&#x5F85;&#x60F3;&#x8981;&#x5F00;&#x59CB;&#x771F;&#x6B63;&#x7684;&#x5F00;&#x53D1;&#x4E4B;&#x65C5;&#x4E86;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x5C31;&#x5F00;&#x59CB;&#x542F;&#x7A0B;&#x5427;!</p>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2020-10-26 20:30:36
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="00.html" class="navigation navigation-prev " aria-label="Previous page: 启程——你的第一行 SpringBoot 代码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02.html" class="navigation navigation-next " aria-label="Next page: 1.2 手把手带你搭建开发环境">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.1 知己知彼——SpringBoot 简介","level":"1.2.1","depth":2,"next":{"title":"1.2 手把手带你搭建开发环境","level":"1.2.2","depth":2,"path":"doc/first/02.md","ref":"doc/first/02.md","articles":[]},"previous":{"title":"启程——你的第一行 SpringBoot 代码","level":"1.2","depth":1,"path":"doc/first/00.md","ref":"doc/first/00.md","articles":[{"title":"1.1 知己知彼——SpringBoot 简介","level":"1.2.1","depth":2,"path":"doc/first/01.md","ref":"doc/first/01.md","articles":[]},{"title":"1.2 手把手带你搭建开发环境","level":"1.2.2","depth":2,"path":"doc/first/02.md","ref":"doc/first/02.md","articles":[]},{"title":"1.3 创建你的第一个 SpringBoot 项目","level":"1.2.3","depth":2,"path":"doc/first/03.md","ref":"doc/first/03.md","articles":[]},{"title":"1.4 分析你的第一个 SpringBoot 项目","level":"1.2.4","depth":2,"path":"doc/first/04.md","ref":"doc/first/04.md","articles":[]},{"title":"1.5 小结与点评","level":"1.2.5","depth":2,"path":"doc/first/05.md","ref":"doc/first/05.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","chapter-fold","splitter","page-toc-button","sectionx","hide-element","github","simple-page-toc","accordion","back-to-top-button","prism","-highlight","popup","lightbox","tbfed-pagefooter","image-captions","advanced-emoji","copy-code-button","todo","disqus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"","modify_label":"该文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"disqus":{"useIdentifier":false,"shortName":"springboot-learning"},"github":{"url":"https://github.com/YueYongDev/springboot-learning-for-noob.git"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"accordion":{},"popup":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"anchor-navigation-ex":{"isShowTocTitleIcon":true},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"YueYong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"doc/first/00.html#fig1.2.1","level":"1.2","list_caption":"Figure: 图1.1 Hello World with Spring 2009 vs 2019","alt":"图1.1 Hello World with Spring 2009 vs 2019","nro":1,"url":"https://tva1.sinaimg.cn/large/007S8ZIlgy1gjxc0s2jobj30k00kuwgb.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.1 Hello World with Spring 2009 vs 2019","attributes":{},"skip":false,"key":"1.2.1"},{"backlink":"doc/first/01.html#fig1.2.1.1","level":"1.2.1","list_caption":"Figure: 图1.1.1 Spring全家桶","alt":"图1.1.1 Spring全家桶","nro":2,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk2lxcm117j31qi0sc0yu.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.1.1 Spring全家桶","attributes":{},"skip":false,"key":"1.2.1.1"},{"backlink":"doc/first/01.html#fig1.2.1.2","level":"1.2.1","list_caption":"Figure: 图1.1.2 Spring与SpringBoot的关系","alt":"图1.1.2 Spring与SpringBoot的关系","nro":3,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk2msh3ay4g30k00gon51.gif","index":2,"caption_template":"_CAPTION_","label":"图1.1.2 Spring与SpringBoot的关系","attributes":{},"skip":false,"key":"1.2.1.2"},{"backlink":"doc/first/01.html#fig1.2.1.3","level":"1.2.1","list_caption":"Figure: 图1.1.3 SpringBoot组成","alt":"图1.1.3 SpringBoot组成","nro":4,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk2n5e8i8nj30ci09edgt.jpg","index":3,"caption_template":"_CAPTION_","label":"图1.1.3 SpringBoot组成","attributes":{},"skip":false,"key":"1.2.1.3"},{"backlink":"doc/first/02.html#fig1.2.2.1","level":"1.2.2","list_caption":"Figure: 图1.2.1 Java构建工具的演进","alt":"图1.2.1 Java构建工具的演进","nro":5,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk314fqv6bj30hq0db3zb.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.2.1 Java构建工具的演进","attributes":{},"skip":false,"key":"1.2.2.1"},{"backlink":"doc/first/02.html#fig1.2.2.2","level":"1.2.2","list_caption":"Figure: 图1.2.2a Oracle JDK下载地址","alt":"图1.2.2a Oracle JDK下载地址","nro":6,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk8jrpdei0j31hc0u0drl.jpg","index":2,"caption_template":"_CAPTION_","label":"图1.2.2a Oracle JDK下载地址","attributes":{},"skip":false,"key":"1.2.2.2"},{"backlink":"doc/first/02.html#fig1.2.2.3","level":"1.2.2","list_caption":"Figure: 图1.2.2b Oracle JDK下载地址","alt":"图1.2.2b Oracle JDK下载地址","nro":7,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk8jtuoonej31hc0u0qhp.jpg","index":3,"caption_template":"_CAPTION_","label":"图1.2.2b Oracle JDK下载地址","attributes":{},"skip":false,"key":"1.2.2.3"},{"backlink":"doc/first/02.html#fig1.2.2.4","level":"1.2.2","list_caption":"Figure: 图1.2.3 清华大学开源软件镜像站","alt":"图1.2.3 清华大学开源软件镜像站","nro":8,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk8k5lzdw2j32do0u044c.jpg","index":4,"caption_template":"_CAPTION_","label":"图1.2.3 清华大学开源软件镜像站","attributes":{},"skip":false,"key":"1.2.2.4"},{"backlink":"doc/first/02.html#fig1.2.2.5","level":"1.2.2","list_caption":"Figure: 图1.2.4 清华大学开源软件镜像站","alt":"图1.2.4 清华大学开源软件镜像站","nro":9,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk8k7qhpa3j31z80q8ah8.jpg","index":5,"caption_template":"_CAPTION_","label":"图1.2.4 清华大学开源软件镜像站","attributes":{},"skip":false,"key":"1.2.2.5"},{"backlink":"doc/first/02.html#fig1.2.2.6","level":"1.2.2","list_caption":"Figure: 图1.2.5a 双击执行安装文件","alt":"图1.2.5a 双击执行安装文件","nro":10,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcan9qjsmj31eg0jqtkt.jpg","index":6,"caption_template":"_CAPTION_","label":"图1.2.5a 双击执行安装文件","attributes":{},"skip":false,"key":"1.2.2.6"},{"backlink":"doc/first/02.html#fig1.2.2.7","level":"1.2.2","list_caption":"Figure: 图1.2.5b 双击执行安装文件","alt":"图1.2.5b 双击执行安装文件","nro":11,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcap10j7xj314k0u0naw.jpg","index":7,"caption_template":"_CAPTION_","label":"图1.2.5b 双击执行安装文件","attributes":{},"skip":false,"key":"1.2.2.7"},{"backlink":"doc/first/02.html#fig1.2.2.8","level":"1.2.2","list_caption":"Figure: 图1.2.6 Windows Terminal","alt":"图1.2.6 Windows Terminal","nro":12,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc3vtgdwaj31qy0sk433.jpg","index":8,"caption_template":"_CAPTION_","label":"图1.2.6 Windows Terminal","attributes":{},"skip":false,"key":"1.2.2.8"},{"backlink":"doc/first/02.html#fig1.2.2.9","level":"1.2.2","list_caption":"Figure: 图1.2.7 执行java命令的结果","alt":"图1.2.7 执行java命令的结果","nro":13,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc3xq2o61j31c00u01ah.jpg","index":9,"caption_template":"_CAPTION_","label":"图1.2.7 执行java命令的结果","attributes":{},"skip":false,"key":"1.2.2.9"},{"backlink":"doc/first/02.html#fig1.2.2.10","level":"1.2.2","list_caption":"Figure: 图1.2.8 执行javac命令的结果","alt":"图1.2.8 执行javac命令的结果","nro":14,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc3z9g40nj31c00u0h5v.jpg","index":10,"caption_template":"_CAPTION_","label":"图1.2.8 执行javac命令的结果","attributes":{},"skip":false,"key":"1.2.2.10"},{"backlink":"doc/first/02.html#fig1.2.2.11","level":"1.2.2","list_caption":"Figure: 图1.2.9 QQ 属性","alt":"图1.2.9 QQ 属性","nro":15,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkfpy9syooj30mw0xmmzh.jpg","index":11,"caption_template":"_CAPTION_","label":"图1.2.9 QQ 属性","attributes":{},"skip":false,"key":"1.2.2.11"},{"backlink":"doc/first/02.html#fig1.2.2.12","level":"1.2.2","list_caption":"Figure: 图1.2.10 命令行示例","alt":"图1.2.10 命令行示例","nro":16,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkfq29dyg0j31mr0u0aiv.jpg","index":12,"caption_template":"_CAPTION_","label":"图1.2.10 命令行示例","attributes":{},"skip":false,"key":"1.2.2.12"},{"backlink":"doc/first/02.html#fig1.2.2.13","level":"1.2.2","list_caption":"Figure: 图1.2.11a 使用环境变量","alt":"图1.2.11a 使用环境变量","nro":17,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkfq3y2wn4j31eb0u0b29.jpg","index":13,"caption_template":"_CAPTION_","label":"图1.2.11a 使用环境变量","attributes":{},"skip":false,"key":"1.2.2.13"},{"backlink":"doc/first/02.html#fig1.2.2.14","level":"1.2.2","list_caption":"Figure: 图1.2.11b 使用环境变量","alt":"图1.2.11b 使用环境变量","nro":18,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkfq810x2fj31gr0u0wly.jpg","index":14,"caption_template":"_CAPTION_","label":"图1.2.11b 使用环境变量","attributes":{},"skip":false,"key":"1.2.2.14"},{"backlink":"doc/first/02.html#fig1.2.2.15","level":"1.2.2","list_caption":"Figure: 图1.2.12 环境变量之间的关系","alt":"图1.2.12 环境变量之间的关系","nro":19,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc7x4h8nsj30z60idmxr.jpg","index":15,"caption_template":"_CAPTION_","label":"图1.2.12 环境变量之间的关系","attributes":{},"skip":false,"key":"1.2.2.15"},{"backlink":"doc/first/02.html#fig1.2.2.16","level":"1.2.2","list_caption":"Figure: 图1.2.13 java 和 javac 命令的原理","alt":"图1.2.13 java 和 javac 命令的原理","nro":20,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc8ufipqvj32is0lin5x.jpg","index":16,"caption_template":"_CAPTION_","label":"图1.2.13 java 和 javac 命令的原理","attributes":{},"skip":false,"key":"1.2.2.16"},{"backlink":"doc/first/02.html#fig1.2.2.17","level":"1.2.2","list_caption":"Figure: 图1.2.14 Maven 官网下载地址","alt":"图1.2.14 Maven 官网下载地址","nro":21,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc929gru5j31q60u0192.jpg","index":17,"caption_template":"_CAPTION_","label":"图1.2.14 Maven 官网下载地址","attributes":{},"skip":false,"key":"1.2.2.17"},{"backlink":"doc/first/02.html#fig1.2.2.18","level":"1.2.2","list_caption":"Figure: 图1.2.15 Maven 解压路径","alt":"图1.2.15 Maven 解压路径","nro":22,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc95a6fftj31500cgq4w.jpg","index":18,"caption_template":"_CAPTION_","label":"图1.2.15 Maven 解压路径","attributes":{},"skip":false,"key":"1.2.2.18"},{"backlink":"doc/first/02.html#fig1.2.2.19","level":"1.2.2","list_caption":"Figure: 图1.2.16 Maven 环境变量配置","alt":"图1.2.16 Maven 环境变量配置","nro":23,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc99aatztj31ep0u0qed.jpg","index":19,"caption_template":"_CAPTION_","label":"图1.2.16 Maven 环境变量配置","attributes":{},"skip":false,"key":"1.2.2.19"},{"backlink":"doc/first/02.html#fig1.2.2.20","level":"1.2.2","list_caption":"Figure: 图1.2.17 验证 Maven 环境配置结果","alt":"图1.2.17 验证 Maven 环境配置结果","nro":24,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc9aw83i0j31pa096q4k.jpg","index":20,"caption_template":"_CAPTION_","label":"图1.2.17 验证 Maven 环境配置结果","attributes":{},"skip":false,"key":"1.2.2.20"},{"backlink":"doc/first/02.html#fig1.2.2.21","level":"1.2.2","list_caption":"Figure: 图1.2.18 Maven 配置文件路径","alt":"图1.2.18 Maven 配置文件路径","nro":25,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc9e3k07tj315o07y3zq.jpg","index":21,"caption_template":"_CAPTION_","label":"图1.2.18 Maven 配置文件路径","attributes":{},"skip":false,"key":"1.2.2.21"},{"backlink":"doc/first/02.html#fig1.2.2.22","level":"1.2.2","list_caption":"Figure: 图1.2.18 Maven jar包存放路径配置","alt":"图1.2.18 Maven jar包存放路径配置","nro":26,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc9hr1t1pj318a0iyaew.jpg","index":22,"caption_template":"_CAPTION_","label":"图1.2.18 Maven jar包存放路径配置","attributes":{},"skip":false,"key":"1.2.2.22"},{"backlink":"doc/first/02.html#fig1.2.2.23","level":"1.2.2","list_caption":"Figure: 图1.2.19 Maven 阿里云镜像配置","alt":"图1.2.19 Maven 阿里云镜像配置","nro":27,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc9ltblf0j30sw0lc41l.jpg","index":23,"caption_template":"_CAPTION_","label":"图1.2.19 Maven 阿里云镜像配置","attributes":{},"skip":false,"key":"1.2.2.23"},{"backlink":"doc/first/02.html#fig1.2.2.24","level":"1.2.2","list_caption":"Figure: 图1.2.20 IDEA 版本比较","alt":"图1.2.20 IDEA 版本比较","nro":28,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc9shc8kkj319d0u042c.jpg","index":24,"caption_template":"_CAPTION_","label":"图1.2.20 IDEA 版本比较","attributes":{},"skip":false,"key":"1.2.2.24"},{"backlink":"doc/first/02.html#fig1.2.2.25","level":"1.2.2","list_caption":"Figure: 图1.2.21 IDEA 安装过程","alt":"图1.2.21 IDEA 安装过程","nro":29,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcabgea5dj314o0u07nt.jpg","index":25,"caption_template":"_CAPTION_","label":"图1.2.21 IDEA 安装过程","attributes":{},"skip":false,"key":"1.2.2.25"},{"backlink":"doc/first/02.html#fig1.2.2.26","level":"1.2.2","list_caption":"Figure: 图1.2.22 IDEA 配置","alt":"图1.2.22 IDEA 配置","nro":30,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcacar8qkj30sw0ckjt3.jpg","index":26,"caption_template":"_CAPTION_","label":"图1.2.22 IDEA 配置","attributes":{},"skip":false,"key":"1.2.2.26"},{"backlink":"doc/first/02.html#fig1.2.2.27","level":"1.2.2","list_caption":"Figure: 图1.2.21 IDEA 配置","alt":"图1.2.21 IDEA 配置","nro":31,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcaiemza0j311s0u0ar7.jpg","index":27,"caption_template":"_CAPTION_","label":"图1.2.21 IDEA 配置","attributes":{},"skip":false,"key":"1.2.2.27"},{"backlink":"doc/first/02.html#fig1.2.2.28","level":"1.2.2","list_caption":"Figure: 图1.2.22 完成 IDEA 的安装","alt":"图1.2.22 完成 IDEA 的安装","nro":32,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcajpkje3j312e0rwn02.jpg","index":28,"caption_template":"_CAPTION_","label":"图1.2.22 完成 IDEA 的安装","attributes":{},"skip":false,"key":"1.2.2.28"},{"backlink":"doc/first/02.html#fig1.2.2.29","level":"1.2.2","list_caption":"Figure: 图1.2.23 IDEA自带的Maven","alt":"图1.2.23 IDEA自带的Maven","nro":33,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gko2egw29fj30xs0o4mzf.jpg","index":29,"caption_template":"_CAPTION_","label":"图1.2.23 IDEA自带的Maven","attributes":{},"skip":false,"key":"1.2.2.29"},{"backlink":"doc/first/02.html#fig1.2.2.30","level":"1.2.2","list_caption":"Figure: 图1.2.24 配置IDEA中的Maven","alt":"图1.2.24 配置IDEA中的Maven","nro":34,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gko2zyzlkcj30q90n9myt.jpg","index":30,"caption_template":"_CAPTION_","label":"图1.2.24 配置IDEA中的Maven","attributes":{},"skip":false,"key":"1.2.2.30"},{"backlink":"doc/first/03.html#fig1.2.3.1","level":"1.2.3","list_caption":"Figure: 图1.3.1 创建新项目","alt":"图1.3.1 创建新项目","nro":35,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkhswnn4wfj31hf0u0n2c.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.3.1 创建新项目","attributes":{},"skip":false,"key":"1.2.3.1"},{"backlink":"doc/first/03.html#fig1.2.3.2","level":"1.2.3","list_caption":"Figure: 图1.3.2 从Spring官网下载所需文件","alt":"图1.3.2 从Spring官网下载所需文件","nro":36,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkhszlo5exj31hf0u0ju9.jpg","index":2,"caption_template":"_CAPTION_","label":"图1.3.2 从Spring官网下载所需文件","attributes":{},"skip":false,"key":"1.2.3.2"},{"backlink":"doc/first/03.html#fig1.2.3.3","level":"1.2.3","list_caption":"Figure: 图1.3.3 工程设置界面","alt":"图1.3.3 工程设置界面","nro":37,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkht2snuhpj31g40u0q7a.jpg","index":3,"caption_template":"_CAPTION_","label":"图1.3.3 工程设置界面","attributes":{},"skip":false,"key":"1.2.3.3"},{"backlink":"doc/first/03.html#fig1.2.3.4","level":"1.2.3","list_caption":"Figure: 图1.3.4 Dependencies 的选择","alt":"图1.3.4 Dependencies 的选择","nro":38,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkizp08takj30xc0j7goe.jpg","index":4,"caption_template":"_CAPTION_","label":"图1.3.4 Dependencies 的选择","attributes":{},"skip":false,"key":"1.2.3.4"},{"backlink":"doc/first/03.html#fig1.2.3.5","level":"1.2.3","list_caption":"Figure: 图1.3.5 选择工程路径","alt":"图1.3.5 选择工程路径","nro":39,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkizq661y0j30xc0j70tk.jpg","index":5,"caption_template":"_CAPTION_","label":"图1.3.5 选择工程路径","attributes":{},"skip":false,"key":"1.2.3.5"},{"backlink":"doc/first/03.html#fig1.2.3.6","level":"1.2.3","list_caption":"Figure: 图1.3.6 项目创建成功","alt":"图1.3.6 项目创建成功","nro":40,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkizuf2517j31hc0u0gq1.jpg","index":6,"caption_template":"_CAPTION_","label":"图1.3.6 项目创建成功","attributes":{},"skip":false,"key":"1.2.3.6"},{"backlink":"doc/first/03.html#fig1.2.3.7","level":"1.2.3","list_caption":"Figure: 图1.3.7 顶部工具栏中的图标","alt":"图1.3.7 顶部工具栏中的图标","nro":41,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj687s2n1j30ei01e3yi.jpg","index":7,"caption_template":"_CAPTION_","label":"图1.3.7 顶部工具栏中的图标","attributes":{},"skip":false,"key":"1.2.3.7"},{"backlink":"doc/first/03.html#fig1.2.3.8","level":"1.2.3","list_caption":"Figure: 图1.3.8 右键运行项目","alt":"图1.3.8 右键运行项目","nro":42,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj6llpzgnj31c00u04eg.jpg","index":8,"caption_template":"_CAPTION_","label":"图1.3.8 右键运行项目","attributes":{},"skip":false,"key":"1.2.3.8"},{"backlink":"doc/first/03.html#fig1.2.3.9","level":"1.2.3","list_caption":"Figure: 图1.3.9 运行 HelloWorld 项目","alt":"图1.3.9 运行 HelloWorld 项目","nro":43,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj6b9hh30j31c00u0h2k.jpg","index":9,"caption_template":"_CAPTION_","label":"图1.3.9 运行 HelloWorld 项目","attributes":{},"skip":false,"key":"1.2.3.9"},{"backlink":"doc/first/03.html#fig1.2.3.10","level":"1.2.3","list_caption":"Figure: 图1.3.10 通过 Maven 启动项目","alt":"图1.3.10 通过 Maven 启动项目","nro":44,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj72rbfssj31c00u0aol.jpg","index":10,"caption_template":"_CAPTION_","label":"图1.3.10 通过 Maven 启动项目","attributes":{},"skip":false,"key":"1.2.3.10"},{"backlink":"doc/first/03.html#fig1.2.3.11","level":"1.2.3","list_caption":"Figure: 图1.3.11 通过maven将项目打成Jar包","alt":"图1.3.11 通过maven将项目打成Jar包","nro":45,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj7erihijj31q40u0gzx.jpg","index":11,"caption_template":"_CAPTION_","label":"图1.3.11 通过maven将项目打成Jar包","attributes":{},"skip":false,"key":"1.2.3.11"},{"backlink":"doc/first/03.html#fig1.2.3.12","level":"1.2.3","list_caption":"Figure: 图1.3.12 通过Jar包方式启动项目","alt":"图1.3.12 通过Jar包方式启动项目","nro":46,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj7g1bp4cj32la0paaiz.jpg","index":12,"caption_template":"_CAPTION_","label":"图1.3.12 通过Jar包方式启动项目","attributes":{},"skip":false,"key":"1.2.3.12"},{"backlink":"doc/first/04.html#fig1.2.4.1","level":"1.2.4","list_caption":"Figure: 图1.4.1 SpringBoot项目结构","alt":"图1.4.1 SpringBoot项目结构","nro":47,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkljldiz81j31q00sidl5.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.4.1 SpringBoot项目结构","attributes":{},"skip":false,"key":"1.2.4.1"},{"backlink":"doc/first/04.html#fig1.2.4.2","level":"1.2.4","list_caption":"Figure: 图1.4.2 基础结构目录介绍","alt":"图1.4.2 基础结构目录介绍","nro":48,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkljvcv3qtj30ke0fowfr.jpg","index":2,"caption_template":"_CAPTION_","label":"图1.4.2 基础结构目录介绍","attributes":{},"skip":false,"key":"1.2.4.2"},{"backlink":"doc/first/04.html#fig1.2.4.3","level":"1.2.4","list_caption":"Figure: 图1.4.3 特殊项目目录","alt":"图1.4.3 特殊项目目录","nro":49,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkmbwqvry4j30jq0ocac7.jpg","index":3,"caption_template":"_CAPTION_","label":"图1.4.3 特殊项目目录","attributes":{},"skip":false,"key":"1.2.4.3"},{"backlink":"doc/second/00.html#fig1.3.1","level":"1.3","list_caption":"Figure: 图1 类似互联网的结构","alt":"图1 类似互联网的结构","nro":50,"url":"https://tva1.sinaimg.cn/large/007S8ZIlgy1gjx1k05syuj31mf0twarm.jpg","index":1,"caption_template":"_CAPTION_","label":"图1 类似互联网的结构","attributes":{},"skip":false,"key":"1.3.1"},{"backlink":"doc/second/01.html#fig1.3.1.1","level":"1.3.1","list_caption":"Figure: 图2.1.1 RESTful 的公式","alt":"图2.1.1 RESTful 的公式","nro":51,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktento2voj30r203nmxe.jpg","index":1,"caption_template":"_CAPTION_","label":"图2.1.1 RESTful 的公式","attributes":{},"skip":false,"key":"1.3.1.1"},{"backlink":"doc/second/01.html#fig1.3.1.2","level":"1.3.1","list_caption":"Figure: 图2.1.2 两种API的设计风格","alt":"图2.1.2 两种API的设计风格","nro":52,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktdaqhzifj31e80iqq6z.jpg","index":2,"caption_template":"_CAPTION_","label":"图2.1.2 两种API的设计风格","attributes":{},"skip":false,"key":"1.3.1.2"},{"backlink":"doc/second/01.html#fig1.3.1.3","level":"1.3.1","list_caption":"Figure: 图2.1.3 HTTP动词与资源操作的对应","alt":"图2.1.3 HTTP动词与资源操作的对应","nro":53,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktdvg7g10j31iq0bedh0.jpg","index":3,"caption_template":"_CAPTION_","label":"图2.1.3 HTTP动词与资源操作的对应","attributes":{},"skip":false,"key":"1.3.1.3"},{"backlink":"doc/second/01.html#fig1.3.1.4","level":"1.3.1","list_caption":"Figure: 图2.1.4 HTTP状态码与API交互状态的对应","alt":"图2.1.4 HTTP状态码与API交互状态的对应","nro":54,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktdxagfyaj31iq09kabp.jpg","index":4,"caption_template":"_CAPTION_","label":"图2.1.4 HTTP状态码与API交互状态的对应","attributes":{},"skip":false,"key":"1.3.1.4"},{"backlink":"doc/second/01.html#fig1.3.1.5","level":"1.3.1","list_caption":"Figure: 图2.1.5 两种常见的结构化数据","alt":"图2.1.5 两种常见的结构化数据","nro":55,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktem5src8j310y0cgac7.jpg","index":5,"caption_template":"_CAPTION_","label":"图2.1.5 两种常见的结构化数据","attributes":{},"skip":false,"key":"1.3.1.5"},{"backlink":"doc/second/02.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: 图2.2.1 项目的初始结构","alt":"图2.2.1 项目的初始结构","nro":56,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkuqu29umxj30ly0hiwft.jpg","index":1,"caption_template":"_CAPTION_","label":"图2.2.1 项目的初始结构","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"doc/second/02.html#fig1.3.2.2","level":"1.3.2","list_caption":"Figure: 图2.2.2 新的项目结构","alt":"图2.2.2 新的项目结构","nro":57,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkuqyoz03rj30jg0lwjt1.jpg","index":2,"caption_template":"_CAPTION_","label":"图2.2.2 新的项目结构","attributes":{},"skip":false,"key":"1.3.2.2"},{"backlink":"doc/second/02.html#fig1.3.2.3","level":"1.3.2","list_caption":"Figure: 图2.2.3 HTTP动词与资源操作动作的映射","alt":"图2.2.3 HTTP动词与资源操作动作的映射","nro":58,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktdvg7g10j31iq0bedh0.jpg","index":3,"caption_template":"_CAPTION_","label":"图2.2.3 HTTP动词与资源操作动作的映射","attributes":{},"skip":false,"key":"1.3.2.3"},{"backlink":"doc/second/02.html#fig1.3.2.4","level":"1.3.2","list_caption":"Figure: 图2.2.4 请求与代码的映射","alt":"图2.2.4 请求与代码的映射","nro":59,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkuqh5qfmwj30yi0gugnx.jpg","index":4,"caption_template":"_CAPTION_","label":"图2.2.4 请求与代码的映射","attributes":{},"skip":false,"key":"1.3.2.4"}]},"title":"springboot-learning-for-noob","language":"zh-hans","links":{"sidebar":{"我的博客":"https://blog.liangyueyong.cn"}},"gitbook":"*","description":"给小白的第一本SpringBoot编程书"},"file":{"path":"doc/first/01.md","mtime":"2020-10-26T12:30:36.948Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-19T13:41:53.568Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

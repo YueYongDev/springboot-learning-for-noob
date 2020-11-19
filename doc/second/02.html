@@ -1,0 +1,837 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.2 使用 SpringBoot 构建 RESTful API · springboot-learning-for-noob</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="YueYong">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03.html" />
+    
+    
+    <link rel="prev" href="01.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://blog.liangyueyong.cn" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../first/00.html">
+            
+                <a href="../first/00.html">
+            
+                    
+                    启程——你的第一行 SpringBoot 代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../first/01.html">
+            
+                <a href="../first/01.html">
+            
+                    
+                    1.1 知己知彼——SpringBoot 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../first/02.html">
+            
+                <a href="../first/02.html">
+            
+                    
+                    1.2 手把手带你搭建开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../first/03.html">
+            
+                <a href="../first/03.html">
+            
+                    
+                    1.3 创建你的第一个 SpringBoot 项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../first/04.html">
+            
+                <a href="../first/04.html">
+            
+                    
+                    1.4 分析你的第一个 SpringBoot 项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../first/05.html">
+            
+                <a href="../first/05.html">
+            
+                    
+                    1.5 小结与点评
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    探究 Web 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    2.1 最常用的场景——RESTful API 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    2.2 使用 SpringBoot 构建 RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    2.3 前行必备——接口请求工具 Postman 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    2.4 FastJSON 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="05.html">
+            
+                <a href="05.html">
+            
+                    
+                    2.5 使用 SpringBoot + Swagger2 构建一个 RESTful API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    2.6 RESTful API 的最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="07.html">
+            
+                <a href="07.html">
+            
+                    
+                    2.7 小结与点评
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2.2 使用 SpringBoot 构建 RESTful API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="22-&#x4F7F;&#x7528;-springboot-&#x6784;&#x5EFA;-restful-api">2.2 &#x4F7F;&#x7528; SpringBoot &#x6784;&#x5EFA; RESTful API</h1>
+<p>Spring Boot &#x5BF9; Web &#x5F00;&#x53D1;&#x7684;&#x2F40;&#x6301;&#x5F88;&#x5168;&#x9762;&#xFF0C;&#x5305;&#x62EC;&#x5F00;&#x53D1;&#x3001;&#x6D4B;&#x8BD5;&#x548C;&#x90E8;&#x7F72;&#x9636;&#x6BB5;&#x90FD;&#x505A;&#xF9BA;&#x2F40;&#x6301;&#x3002;spring-boot-starter-web &#x662F; Spring Boot &#x5BF9; Web &#x5F00;&#x53D1;&#x63D0;&#x4F9B;&#x652F;&#x6301;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E3B;&#x8981;&#x5305;&#x62EC; RESTful&#xFF0C;&#x53C2;&#x6570;&#x6821;&#x9A8C;&#x3001;&#x4F7F;&#x7528; Tomcat &#x4F5C;&#x4E3A;&#x5185;&#x5D4C;&#x5BB9;&#xFA38;&#x7B49;&#x529F;&#x80FD;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x7ED9;&#x5927;&#x5BB6;&#x2F00;&#x4E00;&#x4ECB;&#x7ECD;&#x3002;</p>
+<blockquote>
+<p>&#x672C;&#x8282;&#x5185;&#x5BB9;&#x6240;&#x4F7F;&#x7528;&#x7684; SpringBoot &#x7248;&#x672C;&#x4E3A;<strong>2.3.4.RELEASE</strong>&#x3002;</p>
+</blockquote>
+<h2 id="221-&#x5BF9;-json-&#x7684;&#x652F;&#x6301;">2.2.1 &#x5BF9; JSON &#x7684;&#x652F;&#x6301;</h2>
+<p>&#x65E9;&#x671F;&#x5728; Spring &#x4F53;&#x7CFB;&#x4E2D;&#x4F7F;&#x7528; JSON &#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x591A;&#x9879; XML &#x548C;&#x6CE8;&#x89E3;&#xFF0C;&#x73B0;&#x5728; Spring Boot &#x4F53;&#x7CFB;&#x4E2D;&#xFF0C;&#x5BF9; JSON &#x652F;&#x6301;&#x7B80;&#x5355;&#x2F7D;&#x2F1C;&#x5B8C;&#x5584;&#xFF0C;&#x5728; Web &#x5C42;&#x4F7F;&#x2F64;&#x53EA;&#x9700;&#x8981;&#x2F00;&#x4E2A; <code>@RestController</code> &#x6CE8;&#x89E3;&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7; IDEA &#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>restful-api</code>&#x9879;&#x76EE;&#xFF0C;&#x5E76;&#x5728; pom.xml &#x4E2D;&#x6DFB;&#x52A0; Web &#x4F9D;&#x8D56;&#x3002;</p>
+<pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.3.4.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;<code>version</code>&#xFF0C;maven &#x5C06;&#x4F1A;&#x7ED9;&#x6211;&#x81EA;&#x52A8;&#x4E0B;&#x8F7D;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x7684;&#x76F8;&#x5173;&#x4F9D;&#x8D56;&#x3002;&#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x7248;&#x672C;&#x548C;&#x4F60;&#x5F53;&#x524D;<code>pom.xml</code>&#x6587;&#x4EF6;&#x4E2D;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x7236;<code>pom.xml</code>&#x6587;&#x4EF6;&#x6709;&#x5173;&#xFF0C;&#x5373;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span></code>&#x6807;&#x7B7E;&#x5185;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x7248;&#x672C;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.3.4.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>relativePath</span><span class="token punctuation">/&gt;</span></span> <span class="token comment">&lt;!-- lookup parent from repository --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+</blockquote>
+<p>&#x76EE;&#x524D;&#x7684;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x5E94;&#x8BE5;&#x5982;&#x56FE; 2.2.1 &#x6240;&#x793A;&#x3002;</p>
+<a href="https://tva1.sinaimg.cn/large/0081Kckwly1gkuqu29umxj30ly0hiwft.jpg" data-lightbox="65d9dca6-a5be-49fd-b2e9-d3c2bdbe3110" data-title="&#x56FE;2.2.1 &#x9879;&#x76EE;&#x7684;&#x521D;&#x59CB;&#x7ED3;&#x6784;" target="_blank"><figure id="fig1.3.2.1"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkuqu29umxj30ly0hiwft.jpg" alt="&#x56FE;2.2.1 &#x9879;&#x76EE;&#x7684;&#x521D;&#x59CB;&#x7ED3;&#x6784;"><figcaption>&#x56FE;2.2.1 &#x9879;&#x76EE;&#x7684;&#x521D;&#x59CB;&#x7ED3;&#x6784;</figcaption></figure></a>
+<p>&#x73B0;&#x5728;&#x53F3;&#x952E; com.example.restfulapi &#x5305;-&gt;New-&gt;Package&#xFF0C;&#x4F1A;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x5EFA;&#x5305;&#x7684;&#x5BF9;&#x8BDD;&#x6846;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x91CC;&#x9762;&#x8F93;&#x5165; model&#xFF0C;&#x7136;&#x540E;&#x56DE;&#x8F66;&#x5373;&#x53EF;&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x53F3;&#x952E; model &#x5305;-&gt;New-&gt;Java Class &#xFF0C;&#x5728; model &#x5305;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x7C7B; User&#xFF0C;User &#x4FE1;&#x606F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> pass<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    &#x2026;&#x2026;
+    <span class="token comment">//setter&#x3001;getter&#x7701;&#x7565;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x9879;&#x2F6C;&#x4E2D;&#x65B0;&#x5EFA; controller &#x5305;&#xFF0C;&#x5E76;&#x5728; controller &#x5305;&#x4E0B;&#x65B0;&#x5EFA;&#x2F00;&#x4E2A;&#x7C7B; UserController&#xFF0C;&#x5728;&#x7C7B;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x2F45;&#x6CD5;&#x8FD4;&#x56DE; User &#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">User</span> user <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        user<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">&quot;&#x95F0;&#x571F;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        user<span class="token punctuation">.</span><span class="token function">setAge</span><span class="token punctuation">(</span><span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        user<span class="token punctuation">.</span><span class="token function">setPass</span><span class="token punctuation">(</span><span class="token string">&quot;123456&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> user<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x76EE;&#x524D;&#x7684;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x5E94;&#x8BE5;&#x5982;&#x56FE; 2.2.2 &#x6240;&#x793A;&#x3002;</p>
+<a href="https://tva1.sinaimg.cn/large/0081Kckwly1gkuqyoz03rj30jg0lwjt1.jpg" data-lightbox="f02a073e-ad2a-4df3-91c2-41cd2d24e468" data-title="&#x56FE;2.2.2 &#x65B0;&#x7684;&#x9879;&#x76EE;&#x7ED3;&#x6784;" target="_blank"><figure id="fig1.3.2.2"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkuqyoz03rj30jg0lwjt1.jpg" alt="&#x56FE;2.2.2 &#x65B0;&#x7684;&#x9879;&#x76EE;&#x7ED3;&#x6784;"><figcaption>&#x56FE;2.2.2 &#x65B0;&#x7684;&#x9879;&#x76EE;&#x7ED3;&#x6784;</figcaption></figure></a>
+<p>&#x5728;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x4E24;&#x4E2A;<strong>&#x6CE8;&#x89E3;</strong>&#xFF0C;&#x6BEB;&#x4E0D;&#x5938;&#x5F20;&#x7684;&#x8BF4;&#xFF0C;&#x672A;&#x6765;&#x4F60;&#x53EF;&#x80FD;&#x8981;&#x7ECF;&#x5E38;&#x548C;&#x8FD9;&#x4E24;&#x4E2A;&#x6CE8;&#x89E3;&#x6253;&#x4EA4;&#x9053;&#x4E86;&#x3002;</p>
+<p>&#x5728;<a href="https://book.liangyueyong.cn/00/01#1-1-2-wei-shen-me-hui-chu-xian-springboot" target="_blank">1.1.2 &#x8282;</a>&#x4E2D;&#x6211;&#x4EEC;&#x8BF4;&#x8FC7;&#xFF0C;SpringBoot &#x7684;&#x51FA;&#x73B0;&#x8BA9;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x4ECE; xml &#x8F6C;&#x5411;&#x6CE8;&#x89E3;&#xFF0C;&#x672A;&#x6765;&#x6211;&#x4EEC;&#x5B66;&#x4E60; SpringBoot &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x82B1;&#x5F88;&#x591A;&#x65F6;&#x95F4;&#x5728;&#x4E00;&#x4E9B;&#x6CE8;&#x89E3;&#x7684;&#x5B66;&#x4E60;&#x4E0A;&#xFF0C;&#x751A;&#x81F3;&#x4F1A;&#x8BA9;&#x4F60;&#x6709;&#x4E00;&#x79CD;&#x5176;&#x5B9E;&#x5B66; SpringBoot &#x5C31;&#x662F;&#x5728;&#x5B66;&#x4E00;&#x4E9B;&#x6CE8;&#x89E3;&#x7684;&#x4F7F;&#x7528;&#x7684;&#x9519;&#x89C9;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x89E3;&#x5E76;&#x4E0D;&#x662F; Spring &#x72EC;&#x6709;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4ED6;&#x662F; Java &#x81EA;&#x5E26;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x5176;&#x5E76;&#x4E0D;&#x4E86;&#x89E3;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x5C06;&#x6CE8;&#x89E3;&#x7684;&#x4F5C;&#x7528;&#x7406;&#x89E3;&#x4E3A;&#x6A2A;&#x5411;&#x6269;&#x5C55;&#x4E00;&#x4E9B;&#x7C7B;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+</blockquote>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x7B2C;&#x4E00;&#x4E2A;&#x6CE8;&#x89E3;<code>@RestController</code>&#x3002;</p>
+<blockquote>
+<p>This code uses Spring <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/bind/annotation/RestController.html" target="_blank"><code>@RestController</code></a> annotation, which marks the class as a controller where every method returns a domain object instead of a view. It is shorthand for including both <code>@Controller</code> and <code>@ResponseBody</code>.</p>
+</blockquote>
+<p>&#x4E0A;&#x8FF0;&#x5185;&#x5BB9;&#x6458;&#x81EA;<a href="https://spring.io/guides/gs/rest-service/" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#xFF0C;&#x5176;&#x5927;&#x81F4;&#x610F;&#x601D;&#x5C31;&#x662F;&#xFF0C;@RestController &#x6CE8;&#x89E3;&#x76F8;&#x5F53;&#x4E8E; @Controller + @ResponseBody &#x5408;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x4F5C;&#x7528;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E0A;&#x8FF0;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Controller</span>
+<span class="token annotation punctuation">@ResponseBody</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+    &#x2026;&#x2026;
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="2221-&#x7406;&#x89E3;-controller-&#x6CE8;&#x89E3;">2.2.2.1 &#x7406;&#x89E3; @Controller &#x6CE8;&#x89E3;</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x8981;&#x505A;&#x7684;&#x662F;&#xFF0C;&#x7406;&#x89E3; @Controller &#x6CE8;&#x89E3;&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#x4ECE;&#x4ED6;&#x7684;&#x540D;&#x5B57;&#x7684;&#x89D2;&#x5EA6;&#x53BB;&#x7406;&#x89E3;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;<strong>&#x63A7;&#x5236;&#x5668;</strong>&#x6CE8;&#x89E3;&#xFF0C;&#x4ED6;&#x7684;&#x4F5C;&#x7528;&#x662F;<strong>&#x63A5;&#x6536;&#x4ECE;&#x524D;&#x7AEF;&#x4F20;&#x6765;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x3002;</strong>&#x901A;&#x5E38;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x7684;&#x6A21;&#x677F;&#x540D;&#x79F0;&#xFF0C;&#x5373;&#x76F4;&#x63A5;&#x6E32;&#x67D3;&#x89C6;&#x56FE;&#x3002;&#x4E00;&#x822C;&#x662F;&#x4E0E; html &#x9875;&#x9762;&#x914D;&#x5408;&#x4F7F;&#x7528;&#x7684;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;@Controller &#x6CE8;&#x89E3;&#x4F1A;&#x548C;@RequestMapping &#x6CE8;&#x89E3;&#x7ED1;&#x5B9A;&#x4F7F;&#x7528;&#xFF0C;&#x4F7F;&#x7528;@RequestMapping &#x548C;@RequestParam &#x7B49;&#x4E00;&#x4E9B;&#x6CE8;&#x89E3;&#x7528;&#x4EE5;&#x5B9A;&#x4E49;<strong>URL &#x8BF7;&#x6C42;&#x548C; Controller &#x65B9;&#x6CD5;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;</strong>&#xFF0C;&#x8FD9;&#x6837;&#x7684; Controller &#x5C31;&#x80FD;&#x88AB;&#x5916;&#x754C;&#x8BBF;&#x95EE;&#x5230;&#x3002;</p>
+<blockquote>
+<p>&#x6709;&#x5173;@RequestMapping &#x548C;@RequestParam &#x7684;&#x4F5C;&#x7528;&#x53CA;&#x7528;&#x6CD5;&#x4E0B;&#x4E00;&#x8282;&#x5C31;&#x4F1A;&#x8BB2;&#x5230;&#x3002;</p>
+</blockquote>
+<h3 id="2222-&#x7406;&#x89E3;-responsebody-&#x6CE8;&#x89E3;">2.2.2.2 &#x7406;&#x89E3; @ResponseBody &#x6CE8;&#x89E3;</h3>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x4E00;&#x4E0B;@ResponseBody &#x6CE8;&#x89E3;</p>
+<blockquote>
+<p>The <em>@ResponseBody</em> annotation tells a controller that the object returned is automatically serialized into JSON and passed back into the <em>HttpResponse</em> object.</p>
+</blockquote>
+<p>&#x4E0A;&#x8FF0;&#x5185;&#x5BB9;&#x662F;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x5BF9;&#x4E8E;@ResponseBody &#x6CE8;&#x89E3;&#x7684;&#x4ECB;&#x7ECD;&#xFF0C;&#x7FFB;&#x8BD1;&#x8FC7;&#x6765;&#x5C31;&#x662F;@ResponseBody &#x6CE8;&#x89E3;&#x662F;&#x7528;&#x6765;&#x5C06;&#x5BF9;&#x8C61;&#x5E8F;&#x5217;&#x5316;&#x6210;&#x4E00;&#x4E2A; JSON &#x5E76;&#x8FD4;&#x56DE; HttpResponse &#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x65E2;&#x7136;@RestController &#x6CE8;&#x89E3;&#x76F8;&#x5F53;&#x4E8E; @Controller + @ResponseBody &#x5408;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x90A3;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5982;&#x679C; controller &#x5C42;&#x7684;&#x7C7B;&#x4E0A;&#x4F7F;&#x2F64;&#xF9BA; @RestController &#x6CE8;&#x89E3;&#xFF0C;&#x5C31;&#x4EE3;&#x8868;&#x8FD9;&#x4E2A;&#x7C7B;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x4EE5; JSON &#x7684;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x4E5F;&#x76F8;&#x5F53;&#x4E8E; JSON &#x7684;&#x2F00;&#x79CD;&#x5FEB;&#x6377;&#x4F7F;&#x2F64;&#x65B9;&#x5F0F;&#x4E86;&#x3002;</p>
+<blockquote>
+<p>&#x5F53;&#x7136;&#x6709;&#x4E00;&#x4E2A;&#x524D;&#x63D0;&#x5C31;&#x662F;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x5BF9;&#x8C61;&#x4E00;&#x5B9A;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x5E8F;&#x5217;&#x5316;&#x6210; JSON &#x7684;&#x3002;SpringBoot &#x4E4B;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5B8C;&#x6210;&#x8FD9;&#x6837;&#x4E00;&#x9879;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; Jackson &#x7684;&#x6846;&#x67B6;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210; JSON&#x3002;</p>
+</blockquote>
+<p>&#x4F20;&#x7EDF; MVC &#x63A7;&#x5236;&#x5668;&#x548C;&#x4E0A;&#x9762;&#x5C55;&#x793A;&#x7684; RESTful web &#x670D;&#x52A1;&#x63A7;&#x5236;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x533A;&#x522B;&#x662F;<strong>&#x521B;&#x5EFA; HTTP &#x54CD;&#x5E94;&#x4F53;&#x7684;&#x65B9;&#x5F0F;</strong>&#x3002;&#x8FD9;&#x4E2A;&#x57FA;&#x4E8E; RESTful &#x7684;&#x63A7;&#x5236;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F9D;&#x8D56;&#x89C6;&#x56FE;&#x6280;&#x672F;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5C06;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x586B;&#x5145;&#x5230; HTML &#x4E2D;&#x5448;&#x73B0;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;&#x5C06;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x4EE5; JSON &#x7684;&#x5F62;&#x5F0F;&#x76F4;&#x63A5;&#x5199;&#x5165; HTTP &#x54CD;&#x5E94;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x597D;&#x5904;&#x662F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;<strong>&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x5F00;&#x53D1;</strong>&#xFF0C;&#x5927;&#x5E45;&#x5EA6;&#x63D0;&#x9AD8;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x3002;</p>
+<h2 id="222-&#x5BF9;-restful-&#x7684;&#x652F;&#x6301;">2.2.2 &#x5BF9; RESTful &#x7684;&#x652F;&#x6301;</h2>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x9664;&#x4E86;@RestController &#x6CE8;&#x89E3;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;@GetMapping &#x6CE8;&#x89E3;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x4E0D;&#x6765;&#x8BF4;&#x4E00;&#x4E0B;&#x4ED6;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5148;&#x6765;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x4E0A;&#x4E00;&#x8282;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>RESTful &#x89C4;&#x8303;&#x7EA6;&#x5B9A;&#x4E86; HTTP &#x52A8;&#x8BCD;&#x4E0E;&#x5BF9;&#x8D44;&#x6E90;&#x64CD;&#x4F5C;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x5982;&#x56FE; 2.2.3 &#x6240;&#x793A;&#x3002;</p>
+<a href="https://tva1.sinaimg.cn/large/0081Kckwgy1gktdvg7g10j31iq0bedh0.jpg" data-lightbox="7d89c88f-5a72-4090-8933-97c413863d9f" data-title="&#x56FE;2.2.3 HTTP&#x52A8;&#x8BCD;&#x4E0E;&#x8D44;&#x6E90;&#x64CD;&#x4F5C;&#x52A8;&#x4F5C;&#x7684;&#x6620;&#x5C04;" target="_blank"><figure id="fig1.3.2.3"><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gktdvg7g10j31iq0bedh0.jpg" alt="&#x56FE;2.2.3 HTTP&#x52A8;&#x8BCD;&#x4E0E;&#x8D44;&#x6E90;&#x64CD;&#x4F5C;&#x52A8;&#x4F5C;&#x7684;&#x6620;&#x5C04;"><figcaption>&#x56FE;2.2.3 HTTP&#x52A8;&#x8BCD;&#x4E0E;&#x8D44;&#x6E90;&#x64CD;&#x4F5C;&#x52A8;&#x4F5C;&#x7684;&#x6620;&#x5C04;</figcaption></figure></a>
+<p>&#x770B;&#x5230;&#x8FD9;&#x60F3;&#x5FC5;&#x4F60;&#x5DF2;&#x7ECF;&#x6709;&#x4E00;&#x4E9B;&#x60F3;&#x6CD5;&#x4E86;&#xFF0C;&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x8FD9;&#x4E9B;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x64CD;&#x4F5C;&#x52A8;&#x4F5C;&#xFF0C;SpringBoot &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x6CE8;&#x89E3;&#x6765;&#x2F40;&#x6301;&#x524D;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x3002;&#x8FD9;&#x4E9B;&#x6CE8;&#x89E3;&#x7528;&#x4E8E;&#x5E2E;&#x52A9;&#x7B80;&#x5316;&#x5E38;&#x7528;&#x7684; HTTP &#x2F45;&#x6CD5;&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x5E76;&#xF901;&#x597D;&#x5730;&#x8868;&#x8FBE;&#x88AB;&#x6CE8;&#x89E3;&#x2F45;&#x6CD5;&#x7684;&#x8BED;&#x4E49;&#x3002;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<ul>
+<li>@GetMapping&#xFF0C;&#x5904;&#xF9E4; Get &#x8BF7;&#x6C42;</li>
+<li>@PostMapping&#xFF0C;&#x5904;&#xF9E4; Post &#x8BF7;&#x6C42;</li>
+<li>@PutMapping&#xFF0C;&#x2F64;&#x4E8E;&#x66F4;&#x65B0;&#x8D44;&#x6E90;</li>
+<li>@DeleteMapping&#xFF0C;&#x5904;&#x7406;&#x5220;&#x9664;&#x8BF7;&#x6C42;</li>
+<li>@PatchMapping&#xFF0C;&#x2F64;&#x4E8E;&#x66F4;&#x65B0;&#x90E8;&#x5206;&#x8D44;&#x6E90;</li>
+</ul>
+<p>&#x5728; 2.2.2.1 &#x8282;&#x7279;&#x5730;&#x6CA1;&#x6709;&#x8BB2;&#x89E3;@RequestMapping&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x56E0;&#x4E3A;&#x4E0A;&#x8FF0;&#x8FD9;&#x4E9B;&#x6CE8;&#x89E3;&#x90FD;&#x662F;@RequestMapping &#x7684;&#x7B80;&#x5199;&#x7248;&#x672C;&#xFF0C;&#x4E0B;&#x2FAF;&#x662F; Java &#x7C7B;&#x4E2D;&#x7684;&#x4F7F;&#x7528;&#x793A;&#xF9B5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span>value<span class="token operator">=</span><span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">)</span>
+&#x7B49;&#x4EF7;&#x4E8E;
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">,</span>method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span>GET<span class="token punctuation">)</span>
+
+<span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span>value<span class="token operator">=</span><span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">)</span>
+&#x7B49;&#x4EF7;&#x4E8E;
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">,</span>method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span>POST<span class="token punctuation">)</span>
+
+<span class="token annotation punctuation">@PutMapping</span><span class="token punctuation">(</span>value<span class="token operator">=</span><span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">)</span>
+&#x7B49;&#x4EF7;&#x4E8E;
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">,</span>method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span>PUT<span class="token punctuation">)</span>
+
+<span class="token annotation punctuation">@DeleteMapping</span><span class="token punctuation">(</span>value<span class="token operator">=</span><span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">)</span>
+&#x7B49;&#x4EF7;&#x4E8E;
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">,</span>method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span>DELETE<span class="token punctuation">)</span>
+
+<span class="token annotation punctuation">@PatchMapping</span><span class="token punctuation">(</span>value<span class="token operator">=</span><span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">)</span>
+&#x7B49;&#x4EF7;&#x4E8E;
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;/xxx&quot;</span><span class="token punctuation">,</span>method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span>PATCH<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x4EE5;&#x4E0A;&#x53EF;&#x4EE5;&#x770B;&#x51FA; RESTful &#x5728;&#x8BF7;&#x6C42;&#x7684;&#x7C7B;&#x578B;&#x4E2D;&#x5C31;&#x6307;&#x5B9A;&#xF9BA;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x64CD;&#x63A7;&#x3002;</p>
+<p>&#x800C;&#x4E14;&#xFF0C;@RequestMapping &#x6CE8;&#x89E3;&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x65B9;&#x6CD5;&#x4E0A;&#xFF0C;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x8FD0;&#x7528;&#x5728;&#x7C7B;&#x4E0A;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span><span class="token punctuation">{</span>
+  &#x2026;&#x2026;
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x548C;&#x5728;&#x65B9;&#x6CD5;&#x4E0A;&#x7684;&#x4F5C;&#x7528;&#x7C7B;&#x4F3C;&#x3002;&#x56FE; 2.2.4 &#x8BF4;&#x660E;&#x4E86;&#x8BF7;&#x6C42;&#x4E0E;&#x4EE3;&#x7801;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x3002;</p>
+<a href="https://tva1.sinaimg.cn/large/0081Kckwly1gkuqh5qfmwj30yi0gugnx.jpg" data-lightbox="e2b591ef-b1f7-4e0f-97b1-1fdd6edd89f7" data-title="&#x56FE;2.2.4 &#x8BF7;&#x6C42;&#x4E0E;&#x4EE3;&#x7801;&#x7684;&#x6620;&#x5C04;" target="_blank"><figure id="fig1.3.2.4"><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gkuqh5qfmwj30yi0gugnx.jpg" alt="&#x56FE;2.2.4 &#x8BF7;&#x6C42;&#x4E0E;&#x4EE3;&#x7801;&#x7684;&#x6620;&#x5C04;"><figcaption>&#x56FE;2.2.4 &#x8BF7;&#x6C42;&#x4E0E;&#x4EE3;&#x7801;&#x7684;&#x6620;&#x5C04;</figcaption></figure></a>
+<h2 id="223-&#x5FEB;&#x901F;&#x4E0A;&#x624B;">2.2.3 &#x5FEB;&#x901F;&#x4E0A;&#x624B;</h2>
+<p>&#x6309;&#x7167; RESTful &#x7684;&#x601D;&#x60F3;&#x6211;&#x4EEC;&#x6765;&#x8BBE;&#x8BA1;&#x4E00;&#x7EC4;&#x5BF9;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x7684; RESTful API&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</th>
+<th>&#x8BF7;&#x6C42;&#x5730;&#x5740;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/users</td>
+<td>&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/user</td>
+<td>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/user</td>
+<td>&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/user/id</td>
+<td>&#x901A;&#x8FC7;&#x7528;&#x6237; id &#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/user/id</td>
+<td>&#x901A;&#x8FC7;&#x7528;&#x6237; id &#x5220;&#x9664;&#x7528;&#x6237;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x7F16;&#x7801;&#x3002;</p>
+<h3 id="2231-&#x51C6;&#x5907;&#x5DE5;&#x4F5C;">2.2.3.1 &#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h3>
+<p>&#x5728; 2.2.1 &#x8282;&#x4ECB;&#x7ECD; SpringBoot &#x5BF9; JSON &#x7684;&#x652F;&#x6301;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A; restful-api &#x9879;&#x76EE;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C06;&#x4F1A;&#x57FA;&#x4E8E;&#x8BE5;&#x9879;&#x76EE;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B; RestfulApiApplication.java&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x6CA1;&#x6709;&#x5BF9;&#x5176;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>restfulapi</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span></span><span class="token class-name">SpringApplication</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>autoconfigure<span class="token punctuation">.</span></span><span class="token class-name">SpringBootApplication</span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RestfulApiApplication</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">RestfulApiApplication</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x70B9;&#x51FB; User &#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x5176;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x4FEE;&#x6539;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>restfulapi<span class="token punctuation">.</span>model</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setId</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x63A8;&#x8350;&#x5927;&#x5BB6;&#x7528; IDEA &#x81EA;&#x52A8;&#x751F;&#x6210; getter/setter &#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x624B;&#x8F93;&#x51FA;&#x73B0;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<blockquote>
+<p>&#x5728; User.java &#x6587;&#x4EF6;&#x4E2D;&#x53F3;&#x952E;&#x7A7A;&#x767D;&#x5904;-&gt;Generate-&gt;Getter and Setter&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x4F60;&#x9700;&#x8981;&#x7684;&#x5C5E;&#x6027;&#x52FE;&#x4E0A;&#x5373;&#x53EF;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x3002;</p>
+</blockquote>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x6253;&#x5F00; UserController.java&#xFF0C;&#x5148;&#x5C06;&#x4E4B;&#x524D;&#x7F16;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x5220;&#x9664;&#xFF0C;&#x66FF;&#x6362;&#x6210;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>restfulapi<span class="token punctuation">.</span>controller</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">RestController</span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="2232-&#x7F16;&#x5199;&#x65B9;&#x6CD5;">2.2.3.2 &#x7F16;&#x5199;&#x65B9;&#x6CD5;</h3>
+<h4 id="&#x83B7;&#x53D6;&#x6240;&#x6709;-user-&#x5BF9;&#x8C61;">&#x83B7;&#x53D6;&#x6240;&#x6709; User &#x5BF9;&#x8C61;</h4>
+<p>&#x56E0;&#x4E3A;&#x8981;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684; User &#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E8B;&#x5148;&#x51C6;&#x5907;&#x597D;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x3002;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x8FD9;&#x7C7B;&#x6570;&#x636E;&#x901A;&#x5E38;&#x662F;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x5F97;&#x5230;&#x7684;&#xFF0C;&#x4F46;&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x8FD8;&#x6CA1;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x6709;&#x5173;&#x6570;&#x636E;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6211;&#x5C31;&#x5229;&#x7528; HashMap &#x6A21;&#x62DF;&#x4E00;&#x4E0B;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Map&#xFF0C;&#x5E76;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5E76;&#x4E3A;&#x5176;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> users<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">UserController</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">User</span> user1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;&#x5F20;&#x4E09;&quot;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">User</span> user2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;&#x674E;&#x56DB;&quot;</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        users <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        users<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>user1<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> user1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        users<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>user2<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> user2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x6765;&#x7F16;&#x5199;&#x4E00;&#x4E2A;<code>getUsers()</code>&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> users<span class="token punctuation">;</span>
+
+    &#x2026;&#x2026;
+
+    <span class="token comment">// &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;</span>
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/users&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> <span class="token function">getUsers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>users<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x9009;&#x62E9; GetMapping &#x8868;&#x660E;&#x8FD9;&#x662F;&#x4E00;&#x4E2A; GET &#x8BF7;&#x6C42;&#xFF0C;&#x76F4;&#x63A5;&#x5C06; Map &#x4E2D;&#x7684;&#x503C;&#x8F6C;&#x5316;&#x6210;&#x96C6;&#x5408;&#x8FD4;&#x56DE;&#x7ED9;&#x524D;&#x7AEF;&#x3002;</p>
+<h4 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x6237;">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x6237;</h4>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> users<span class="token punctuation">;</span>
+
+    &#x2026;&#x2026;
+
+    <span class="token comment">// POST&#x8BF7;&#x6C42;&#xFF0C;&#x901A;&#x8FC7;FormData&#x7684;&#x65B9;&#x5F0F;&#x4ECE;&#x524D;&#x7AEF;&#x4F20;&#x9012;&#x4E00;&#x4E2A;User&#x5BF9;&#x8C61;</span>
+    <span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">createUser</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>users<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> user<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>SpringBoot &#x652F;&#x6301;&#x524D;&#x7AEF;&#x4EE5;&#x591A;&#x79CD;&#x65B9;&#x5F0F;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x9664;&#x4E86;<a href="https://book.liangyueyong.cn/00/03#1-3-41-ru-guo-wo-men-xiang-chuan-ru-can-shu-zen-me-ban" target="_blank">1.3.4.1 &#x5C0F;&#x8282;</a>&#x4E2D;&#x8BF4;&#x7684;&#x76F4;&#x63A5;&#x5728; URL &#x4E2D;&#x4EE5;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x65B9;&#x5F0F;&#x4F20;&#x53C2;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x76F4;&#x63A5;&#x4F20;&#x9012;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x5F0F;&#x63A5;&#x6536;&#x53C2;&#x6570;&#xFF0C;&#x4E0A;&#x8FF0;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x53EA;&#x8981;&#x662F; User &#x5BF9;&#x8C61;&#x6240;&#x5177;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x586B;&#x5145;&#x5230; User &#x5BF9;&#x8C61;&#x4E2D;&#x3002;</p>
+<h4 id="&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;">&#x4FEE;&#x6539;&#x7528;&#x6237;&#x4FE1;&#x606F;</h4>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> users<span class="token punctuation">;</span>
+
+    &#x2026;&#x2026;
+
+    <span class="token comment">// PUT&#x8BF7;&#x6C42;&#xFF0C;&#x901A;&#x8FC7;&#x4ECE;&#x524D;&#x7AEF;&#x4F20;&#x9012;JSON&#x7684;&#x65B9;&#x5F0F;&#x4F20;&#x9012;&#x4E00;&#x4E2A;User&#x5BF9;&#x8C61;</span>
+    <span class="token annotation punctuation">@PutMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">updateUser</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestBody</span> <span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>users<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> user<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>@RequestBody &#x8868;&#x660E;&#x63A5;&#x6536;&#x7684;&#x662F;&#x524D;&#x7AEF;&#x4F20;&#x9012;&#x7684;&#x4E00;&#x4E2A; json&#xFF0C;&#x524D;&#x7AEF;&#x5728;&#x4F20;&#x9012;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5176; <code>contentType</code> &#x4E3A; <code>application/json</code>&#xFF0C;&#x8FD9;&#x6837; SpringBoot &#x624D;&#x4F1A;&#x5C06;&#x524D;&#x7AEF;&#x4F20;&#x6765;&#x7684; json &#x8F6C;&#x6362;&#x6210;&#x76F8;&#x5E94;&#x7684;&#x5B9E;&#x4F53;&#x7C7B;&#x3002;</p>
+<h4 id="&#x901A;&#x8FC7;-id-&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;">&#x901A;&#x8FC7; id &#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</h4>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> users<span class="token punctuation">;</span>
+
+    &#x2026;&#x2026;
+
+    <span class="token comment">// GET&#x8BF7;&#x6C42;&#xFF0C;&#x901A;&#x8FC7;Url&#x83B7;&#x53D6;id</span>
+    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getUserById</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>users<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x8FD9;&#x79CD;&#x4F20;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528; URL &#x8FDB;&#xFA08;&#x4F20;&#x53C2;&#xFF0C;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x4F20;&#x53C2;&#x4F1A;&#x5C06;&#x4F60;&#x7684;&#x53C2;&#x6570;&#x76F4;&#x63A5;&#x4F53;&#x73B0;&#x5728; URL &#x91CC;&#xFF0C;&#x4F8B;&#x5982;&#x4F60;&#x60F3;&#x8981;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x662F; 1&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x4F60;&#x7684;&#x5730;&#x5740;&#x53D8;&#x4E3A;<code>/user/1</code>&#x5373;&#x53EF;&#x3002;&#x8FD9;&#x4E48;&#x505A;&#x7684;&#x597D;&#x5904;&#x662F;&#x4F1A;&#x8BA9;&#x5730;&#x5740;&#x680F;&#x66F4;&#x52A0;&#x7B80;&#x6D01;&#x7F8E;&#x89C2;&#x4E00;&#x4E9B;&#x3002;</p>
+<h4 id="&#x901A;&#x8FC7;-id-&#x5220;&#x9664;&#x7528;&#x6237;&#x4FE1;&#x606F;">&#x901A;&#x8FC7; id &#x5220;&#x9664;&#x7528;&#x6237;&#x4FE1;&#x606F;</h4>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@RestController</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> users<span class="token punctuation">;</span>
+
+    &#x2026;&#x2026;
+
+    <span class="token comment">// DELETE&#x8BF7;&#x6C42;&#xFF0C;&#x901A;&#x8FC7;&#x4F20;&#x9012;body&#x5B57;&#x6BB5;&#x83B7;&#x53D6;id</span>
+    <span class="token annotation punctuation">@DeleteMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteUserById</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span>value<span class="token operator">=</span><span class="token string">&quot;uid&quot;</span><span class="token punctuation">)</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>users<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>@RequestParam &#x6CE8;&#x89E3;&#xFF0C;&#x7528;&#x4E8E;&#x6620;&#x5C04;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF0C;<code>@RequestParam(value=&quot;uid&quot;) int id</code> &#x8868;&#x660E;&#x524D;&#x7AEF;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x540D;&#x662F; uid&#xFF0C;&#x4F46;&#x662F;&#x540E;&#x7AEF;&#x5728;&#x89E3;&#x6790;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x5176;&#x6620;&#x5C04;&#x6210;&#x4E86; id&#x3002;</p>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x4FBF;&#x5B8C;&#x6210;&#x4E86;&#x6709;&#x5173; RESTful API &#x6700;&#x7B80;&#x5355;&#x7684;&#x51E0;&#x79CD;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x548C;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x7684;&#x9014;&#x5F84;&#x3002;</p>
+<p>&#x4E0B;&#x4E00;&#x8282;&#x6211;&#x4EEC;&#x5C06;&#x4F1A;&#x4ECB;&#x7ECD;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7F8E;&#x89C2;&#x5B9E;&#x7528;&#x7684;&#x5DE5;&#x5177;&#x6765;&#x6D4B;&#x8BD5;&#x6211;&#x4EEC;&#x7F16;&#x5199;&#x597D;&#x7684; RESTful API&#x3002;</p>
+<footer class="page-footer"><span class="copyright">powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#xFF1A;
+2020-11-19 21:41:45
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01.html" class="navigation navigation-prev " aria-label="Previous page: 2.1 最常用的场景——RESTful API ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03.html" class="navigation navigation-next " aria-label="Next page: 2.3 前行必备——接口请求工具 Postman 的使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.2 使用 SpringBoot 构建 RESTful API","level":"1.3.2","depth":2,"next":{"title":"2.3 前行必备——接口请求工具 Postman 的使用","level":"1.3.3","depth":2,"path":"doc/second/03.md","ref":"doc/second/03.md","articles":[]},"previous":{"title":"2.1 最常用的场景——RESTful API ","level":"1.3.1","depth":2,"path":"doc/second/01.md","ref":"doc/second/01.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","chapter-fold","splitter","page-toc-button","sectionx","hide-element","github","simple-page-toc","accordion","back-to-top-button","prism","-highlight","popup","lightbox","tbfed-pagefooter","image-captions","advanced-emoji","copy-code-button","todo","disqus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"","modify_label":"该文件最后修改时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"disqus":{"useIdentifier":false,"shortName":"springboot-learning"},"github":{"url":"https://github.com/YueYongDev/springboot-learning-for-noob.git"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"accordion":{},"popup":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"anchor-navigation-ex":{"isShowTocTitleIcon":true},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"YueYong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"doc/first/00.html#fig1.2.1","level":"1.2","list_caption":"Figure: 图1.1 Hello World with Spring 2009 vs 2019","alt":"图1.1 Hello World with Spring 2009 vs 2019","nro":1,"url":"https://tva1.sinaimg.cn/large/007S8ZIlgy1gjxc0s2jobj30k00kuwgb.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.1 Hello World with Spring 2009 vs 2019","attributes":{},"skip":false,"key":"1.2.1"},{"backlink":"doc/first/01.html#fig1.2.1.1","level":"1.2.1","list_caption":"Figure: 图1.1.1 Spring全家桶","alt":"图1.1.1 Spring全家桶","nro":2,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk2lxcm117j31qi0sc0yu.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.1.1 Spring全家桶","attributes":{},"skip":false,"key":"1.2.1.1"},{"backlink":"doc/first/01.html#fig1.2.1.2","level":"1.2.1","list_caption":"Figure: 图1.1.2 Spring与SpringBoot的关系","alt":"图1.1.2 Spring与SpringBoot的关系","nro":3,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk2msh3ay4g30k00gon51.gif","index":2,"caption_template":"_CAPTION_","label":"图1.1.2 Spring与SpringBoot的关系","attributes":{},"skip":false,"key":"1.2.1.2"},{"backlink":"doc/first/01.html#fig1.2.1.3","level":"1.2.1","list_caption":"Figure: 图1.1.3 SpringBoot组成","alt":"图1.1.3 SpringBoot组成","nro":4,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk2n5e8i8nj30ci09edgt.jpg","index":3,"caption_template":"_CAPTION_","label":"图1.1.3 SpringBoot组成","attributes":{},"skip":false,"key":"1.2.1.3"},{"backlink":"doc/first/02.html#fig1.2.2.1","level":"1.2.2","list_caption":"Figure: 图1.2.1 Java构建工具的演进","alt":"图1.2.1 Java构建工具的演进","nro":5,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk314fqv6bj30hq0db3zb.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.2.1 Java构建工具的演进","attributes":{},"skip":false,"key":"1.2.2.1"},{"backlink":"doc/first/02.html#fig1.2.2.2","level":"1.2.2","list_caption":"Figure: 图1.2.2a Oracle JDK下载地址","alt":"图1.2.2a Oracle JDK下载地址","nro":6,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk8jrpdei0j31hc0u0drl.jpg","index":2,"caption_template":"_CAPTION_","label":"图1.2.2a Oracle JDK下载地址","attributes":{},"skip":false,"key":"1.2.2.2"},{"backlink":"doc/first/02.html#fig1.2.2.3","level":"1.2.2","list_caption":"Figure: 图1.2.2b Oracle JDK下载地址","alt":"图1.2.2b Oracle JDK下载地址","nro":7,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk8jtuoonej31hc0u0qhp.jpg","index":3,"caption_template":"_CAPTION_","label":"图1.2.2b Oracle JDK下载地址","attributes":{},"skip":false,"key":"1.2.2.3"},{"backlink":"doc/first/02.html#fig1.2.2.4","level":"1.2.2","list_caption":"Figure: 图1.2.3 清华大学开源软件镜像站","alt":"图1.2.3 清华大学开源软件镜像站","nro":8,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk8k5lzdw2j32do0u044c.jpg","index":4,"caption_template":"_CAPTION_","label":"图1.2.3 清华大学开源软件镜像站","attributes":{},"skip":false,"key":"1.2.2.4"},{"backlink":"doc/first/02.html#fig1.2.2.5","level":"1.2.2","list_caption":"Figure: 图1.2.4 清华大学开源软件镜像站","alt":"图1.2.4 清华大学开源软件镜像站","nro":9,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gk8k7qhpa3j31z80q8ah8.jpg","index":5,"caption_template":"_CAPTION_","label":"图1.2.4 清华大学开源软件镜像站","attributes":{},"skip":false,"key":"1.2.2.5"},{"backlink":"doc/first/02.html#fig1.2.2.6","level":"1.2.2","list_caption":"Figure: 图1.2.5a 双击执行安装文件","alt":"图1.2.5a 双击执行安装文件","nro":10,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcan9qjsmj31eg0jqtkt.jpg","index":6,"caption_template":"_CAPTION_","label":"图1.2.5a 双击执行安装文件","attributes":{},"skip":false,"key":"1.2.2.6"},{"backlink":"doc/first/02.html#fig1.2.2.7","level":"1.2.2","list_caption":"Figure: 图1.2.5b 双击执行安装文件","alt":"图1.2.5b 双击执行安装文件","nro":11,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcap10j7xj314k0u0naw.jpg","index":7,"caption_template":"_CAPTION_","label":"图1.2.5b 双击执行安装文件","attributes":{},"skip":false,"key":"1.2.2.7"},{"backlink":"doc/first/02.html#fig1.2.2.8","level":"1.2.2","list_caption":"Figure: 图1.2.6 Windows Terminal","alt":"图1.2.6 Windows Terminal","nro":12,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc3vtgdwaj31qy0sk433.jpg","index":8,"caption_template":"_CAPTION_","label":"图1.2.6 Windows Terminal","attributes":{},"skip":false,"key":"1.2.2.8"},{"backlink":"doc/first/02.html#fig1.2.2.9","level":"1.2.2","list_caption":"Figure: 图1.2.7 执行java命令的结果","alt":"图1.2.7 执行java命令的结果","nro":13,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc3xq2o61j31c00u01ah.jpg","index":9,"caption_template":"_CAPTION_","label":"图1.2.7 执行java命令的结果","attributes":{},"skip":false,"key":"1.2.2.9"},{"backlink":"doc/first/02.html#fig1.2.2.10","level":"1.2.2","list_caption":"Figure: 图1.2.8 执行javac命令的结果","alt":"图1.2.8 执行javac命令的结果","nro":14,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc3z9g40nj31c00u0h5v.jpg","index":10,"caption_template":"_CAPTION_","label":"图1.2.8 执行javac命令的结果","attributes":{},"skip":false,"key":"1.2.2.10"},{"backlink":"doc/first/02.html#fig1.2.2.11","level":"1.2.2","list_caption":"Figure: 图1.2.9 QQ 属性","alt":"图1.2.9 QQ 属性","nro":15,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkfpy9syooj30mw0xmmzh.jpg","index":11,"caption_template":"_CAPTION_","label":"图1.2.9 QQ 属性","attributes":{},"skip":false,"key":"1.2.2.11"},{"backlink":"doc/first/02.html#fig1.2.2.12","level":"1.2.2","list_caption":"Figure: 图1.2.10 命令行示例","alt":"图1.2.10 命令行示例","nro":16,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkfq29dyg0j31mr0u0aiv.jpg","index":12,"caption_template":"_CAPTION_","label":"图1.2.10 命令行示例","attributes":{},"skip":false,"key":"1.2.2.12"},{"backlink":"doc/first/02.html#fig1.2.2.13","level":"1.2.2","list_caption":"Figure: 图1.2.11a 使用环境变量","alt":"图1.2.11a 使用环境变量","nro":17,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkfq3y2wn4j31eb0u0b29.jpg","index":13,"caption_template":"_CAPTION_","label":"图1.2.11a 使用环境变量","attributes":{},"skip":false,"key":"1.2.2.13"},{"backlink":"doc/first/02.html#fig1.2.2.14","level":"1.2.2","list_caption":"Figure: 图1.2.11b 使用环境变量","alt":"图1.2.11b 使用环境变量","nro":18,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkfq810x2fj31gr0u0wly.jpg","index":14,"caption_template":"_CAPTION_","label":"图1.2.11b 使用环境变量","attributes":{},"skip":false,"key":"1.2.2.14"},{"backlink":"doc/first/02.html#fig1.2.2.15","level":"1.2.2","list_caption":"Figure: 图1.2.12 环境变量之间的关系","alt":"图1.2.12 环境变量之间的关系","nro":19,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc7x4h8nsj30z60idmxr.jpg","index":15,"caption_template":"_CAPTION_","label":"图1.2.12 环境变量之间的关系","attributes":{},"skip":false,"key":"1.2.2.15"},{"backlink":"doc/first/02.html#fig1.2.2.16","level":"1.2.2","list_caption":"Figure: 图1.2.13 java 和 javac 命令的原理","alt":"图1.2.13 java 和 javac 命令的原理","nro":20,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc8ufipqvj32is0lin5x.jpg","index":16,"caption_template":"_CAPTION_","label":"图1.2.13 java 和 javac 命令的原理","attributes":{},"skip":false,"key":"1.2.2.16"},{"backlink":"doc/first/02.html#fig1.2.2.17","level":"1.2.2","list_caption":"Figure: 图1.2.14 Maven 官网下载地址","alt":"图1.2.14 Maven 官网下载地址","nro":21,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc929gru5j31q60u0192.jpg","index":17,"caption_template":"_CAPTION_","label":"图1.2.14 Maven 官网下载地址","attributes":{},"skip":false,"key":"1.2.2.17"},{"backlink":"doc/first/02.html#fig1.2.2.18","level":"1.2.2","list_caption":"Figure: 图1.2.15 Maven 解压路径","alt":"图1.2.15 Maven 解压路径","nro":22,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc95a6fftj31500cgq4w.jpg","index":18,"caption_template":"_CAPTION_","label":"图1.2.15 Maven 解压路径","attributes":{},"skip":false,"key":"1.2.2.18"},{"backlink":"doc/first/02.html#fig1.2.2.19","level":"1.2.2","list_caption":"Figure: 图1.2.16 Maven 环境变量配置","alt":"图1.2.16 Maven 环境变量配置","nro":23,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc99aatztj31ep0u0qed.jpg","index":19,"caption_template":"_CAPTION_","label":"图1.2.16 Maven 环境变量配置","attributes":{},"skip":false,"key":"1.2.2.19"},{"backlink":"doc/first/02.html#fig1.2.2.20","level":"1.2.2","list_caption":"Figure: 图1.2.17 验证 Maven 环境配置结果","alt":"图1.2.17 验证 Maven 环境配置结果","nro":24,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkc9aw83i0j31pa096q4k.jpg","index":20,"caption_template":"_CAPTION_","label":"图1.2.17 验证 Maven 环境配置结果","attributes":{},"skip":false,"key":"1.2.2.20"},{"backlink":"doc/first/02.html#fig1.2.2.21","level":"1.2.2","list_caption":"Figure: 图1.2.18 Maven 配置文件路径","alt":"图1.2.18 Maven 配置文件路径","nro":25,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc9e3k07tj315o07y3zq.jpg","index":21,"caption_template":"_CAPTION_","label":"图1.2.18 Maven 配置文件路径","attributes":{},"skip":false,"key":"1.2.2.21"},{"backlink":"doc/first/02.html#fig1.2.2.22","level":"1.2.2","list_caption":"Figure: 图1.2.18 Maven jar包存放路径配置","alt":"图1.2.18 Maven jar包存放路径配置","nro":26,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc9hr1t1pj318a0iyaew.jpg","index":22,"caption_template":"_CAPTION_","label":"图1.2.18 Maven jar包存放路径配置","attributes":{},"skip":false,"key":"1.2.2.22"},{"backlink":"doc/first/02.html#fig1.2.2.23","level":"1.2.2","list_caption":"Figure: 图1.2.19 Maven 阿里云镜像配置","alt":"图1.2.19 Maven 阿里云镜像配置","nro":27,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc9ltblf0j30sw0lc41l.jpg","index":23,"caption_template":"_CAPTION_","label":"图1.2.19 Maven 阿里云镜像配置","attributes":{},"skip":false,"key":"1.2.2.23"},{"backlink":"doc/first/02.html#fig1.2.2.24","level":"1.2.2","list_caption":"Figure: 图1.2.20 IDEA 版本比较","alt":"图1.2.20 IDEA 版本比较","nro":28,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkc9shc8kkj319d0u042c.jpg","index":24,"caption_template":"_CAPTION_","label":"图1.2.20 IDEA 版本比较","attributes":{},"skip":false,"key":"1.2.2.24"},{"backlink":"doc/first/02.html#fig1.2.2.25","level":"1.2.2","list_caption":"Figure: 图1.2.21 IDEA 安装过程","alt":"图1.2.21 IDEA 安装过程","nro":29,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcabgea5dj314o0u07nt.jpg","index":25,"caption_template":"_CAPTION_","label":"图1.2.21 IDEA 安装过程","attributes":{},"skip":false,"key":"1.2.2.25"},{"backlink":"doc/first/02.html#fig1.2.2.26","level":"1.2.2","list_caption":"Figure: 图1.2.22 IDEA 配置","alt":"图1.2.22 IDEA 配置","nro":30,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcacar8qkj30sw0ckjt3.jpg","index":26,"caption_template":"_CAPTION_","label":"图1.2.22 IDEA 配置","attributes":{},"skip":false,"key":"1.2.2.26"},{"backlink":"doc/first/02.html#fig1.2.2.27","level":"1.2.2","list_caption":"Figure: 图1.2.21 IDEA 配置","alt":"图1.2.21 IDEA 配置","nro":31,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcaiemza0j311s0u0ar7.jpg","index":27,"caption_template":"_CAPTION_","label":"图1.2.21 IDEA 配置","attributes":{},"skip":false,"key":"1.2.2.27"},{"backlink":"doc/first/02.html#fig1.2.2.28","level":"1.2.2","list_caption":"Figure: 图1.2.22 完成 IDEA 的安装","alt":"图1.2.22 完成 IDEA 的安装","nro":32,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkcajpkje3j312e0rwn02.jpg","index":28,"caption_template":"_CAPTION_","label":"图1.2.22 完成 IDEA 的安装","attributes":{},"skip":false,"key":"1.2.2.28"},{"backlink":"doc/first/02.html#fig1.2.2.29","level":"1.2.2","list_caption":"Figure: 图1.2.23 IDEA自带的Maven","alt":"图1.2.23 IDEA自带的Maven","nro":33,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gko2egw29fj30xs0o4mzf.jpg","index":29,"caption_template":"_CAPTION_","label":"图1.2.23 IDEA自带的Maven","attributes":{},"skip":false,"key":"1.2.2.29"},{"backlink":"doc/first/02.html#fig1.2.2.30","level":"1.2.2","list_caption":"Figure: 图1.2.24 配置IDEA中的Maven","alt":"图1.2.24 配置IDEA中的Maven","nro":34,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gko2zyzlkcj30q90n9myt.jpg","index":30,"caption_template":"_CAPTION_","label":"图1.2.24 配置IDEA中的Maven","attributes":{},"skip":false,"key":"1.2.2.30"},{"backlink":"doc/first/03.html#fig1.2.3.1","level":"1.2.3","list_caption":"Figure: 图1.3.1 创建新项目","alt":"图1.3.1 创建新项目","nro":35,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkhswnn4wfj31hf0u0n2c.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.3.1 创建新项目","attributes":{},"skip":false,"key":"1.2.3.1"},{"backlink":"doc/first/03.html#fig1.2.3.2","level":"1.2.3","list_caption":"Figure: 图1.3.2 从Spring官网下载所需文件","alt":"图1.3.2 从Spring官网下载所需文件","nro":36,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkhszlo5exj31hf0u0ju9.jpg","index":2,"caption_template":"_CAPTION_","label":"图1.3.2 从Spring官网下载所需文件","attributes":{},"skip":false,"key":"1.2.3.2"},{"backlink":"doc/first/03.html#fig1.2.3.3","level":"1.2.3","list_caption":"Figure: 图1.3.3 工程设置界面","alt":"图1.3.3 工程设置界面","nro":37,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkht2snuhpj31g40u0q7a.jpg","index":3,"caption_template":"_CAPTION_","label":"图1.3.3 工程设置界面","attributes":{},"skip":false,"key":"1.2.3.3"},{"backlink":"doc/first/03.html#fig1.2.3.4","level":"1.2.3","list_caption":"Figure: 图1.3.4 Dependencies 的选择","alt":"图1.3.4 Dependencies 的选择","nro":38,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkizp08takj30xc0j7goe.jpg","index":4,"caption_template":"_CAPTION_","label":"图1.3.4 Dependencies 的选择","attributes":{},"skip":false,"key":"1.2.3.4"},{"backlink":"doc/first/03.html#fig1.2.3.5","level":"1.2.3","list_caption":"Figure: 图1.3.5 选择工程路径","alt":"图1.3.5 选择工程路径","nro":39,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkizq661y0j30xc0j70tk.jpg","index":5,"caption_template":"_CAPTION_","label":"图1.3.5 选择工程路径","attributes":{},"skip":false,"key":"1.2.3.5"},{"backlink":"doc/first/03.html#fig1.2.3.6","level":"1.2.3","list_caption":"Figure: 图1.3.6 项目创建成功","alt":"图1.3.6 项目创建成功","nro":40,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkizuf2517j31hc0u0gq1.jpg","index":6,"caption_template":"_CAPTION_","label":"图1.3.6 项目创建成功","attributes":{},"skip":false,"key":"1.2.3.6"},{"backlink":"doc/first/03.html#fig1.2.3.7","level":"1.2.3","list_caption":"Figure: 图1.3.7 顶部工具栏中的图标","alt":"图1.3.7 顶部工具栏中的图标","nro":41,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj687s2n1j30ei01e3yi.jpg","index":7,"caption_template":"_CAPTION_","label":"图1.3.7 顶部工具栏中的图标","attributes":{},"skip":false,"key":"1.2.3.7"},{"backlink":"doc/first/03.html#fig1.2.3.8","level":"1.2.3","list_caption":"Figure: 图1.3.8 右键运行项目","alt":"图1.3.8 右键运行项目","nro":42,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj6llpzgnj31c00u04eg.jpg","index":8,"caption_template":"_CAPTION_","label":"图1.3.8 右键运行项目","attributes":{},"skip":false,"key":"1.2.3.8"},{"backlink":"doc/first/03.html#fig1.2.3.9","level":"1.2.3","list_caption":"Figure: 图1.3.9 运行 HelloWorld 项目","alt":"图1.3.9 运行 HelloWorld 项目","nro":43,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj6b9hh30j31c00u0h2k.jpg","index":9,"caption_template":"_CAPTION_","label":"图1.3.9 运行 HelloWorld 项目","attributes":{},"skip":false,"key":"1.2.3.9"},{"backlink":"doc/first/03.html#fig1.2.3.10","level":"1.2.3","list_caption":"Figure: 图1.3.10 通过 Maven 启动项目","alt":"图1.3.10 通过 Maven 启动项目","nro":44,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj72rbfssj31c00u0aol.jpg","index":10,"caption_template":"_CAPTION_","label":"图1.3.10 通过 Maven 启动项目","attributes":{},"skip":false,"key":"1.2.3.10"},{"backlink":"doc/first/03.html#fig1.2.3.11","level":"1.2.3","list_caption":"Figure: 图1.3.11 通过maven将项目打成Jar包","alt":"图1.3.11 通过maven将项目打成Jar包","nro":45,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj7erihijj31q40u0gzx.jpg","index":11,"caption_template":"_CAPTION_","label":"图1.3.11 通过maven将项目打成Jar包","attributes":{},"skip":false,"key":"1.2.3.11"},{"backlink":"doc/first/03.html#fig1.2.3.12","level":"1.2.3","list_caption":"Figure: 图1.3.12 通过Jar包方式启动项目","alt":"图1.3.12 通过Jar包方式启动项目","nro":46,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkj7g1bp4cj32la0paaiz.jpg","index":12,"caption_template":"_CAPTION_","label":"图1.3.12 通过Jar包方式启动项目","attributes":{},"skip":false,"key":"1.2.3.12"},{"backlink":"doc/first/04.html#fig1.2.4.1","level":"1.2.4","list_caption":"Figure: 图1.4.1 SpringBoot项目结构","alt":"图1.4.1 SpringBoot项目结构","nro":47,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkljldiz81j31q00sidl5.jpg","index":1,"caption_template":"_CAPTION_","label":"图1.4.1 SpringBoot项目结构","attributes":{},"skip":false,"key":"1.2.4.1"},{"backlink":"doc/first/04.html#fig1.2.4.2","level":"1.2.4","list_caption":"Figure: 图1.4.2 基础结构目录介绍","alt":"图1.4.2 基础结构目录介绍","nro":48,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkljvcv3qtj30ke0fowfr.jpg","index":2,"caption_template":"_CAPTION_","label":"图1.4.2 基础结构目录介绍","attributes":{},"skip":false,"key":"1.2.4.2"},{"backlink":"doc/first/04.html#fig1.2.4.3","level":"1.2.4","list_caption":"Figure: 图1.4.3 特殊项目目录","alt":"图1.4.3 特殊项目目录","nro":49,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gkmbwqvry4j30jq0ocac7.jpg","index":3,"caption_template":"_CAPTION_","label":"图1.4.3 特殊项目目录","attributes":{},"skip":false,"key":"1.2.4.3"},{"backlink":"doc/second/00.html#fig1.3.1","level":"1.3","list_caption":"Figure: 图1 类似互联网的结构","alt":"图1 类似互联网的结构","nro":50,"url":"https://tva1.sinaimg.cn/large/007S8ZIlgy1gjx1k05syuj31mf0twarm.jpg","index":1,"caption_template":"_CAPTION_","label":"图1 类似互联网的结构","attributes":{},"skip":false,"key":"1.3.1"},{"backlink":"doc/second/01.html#fig1.3.1.1","level":"1.3.1","list_caption":"Figure: 图2.1.1 RESTful 的公式","alt":"图2.1.1 RESTful 的公式","nro":51,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktento2voj30r203nmxe.jpg","index":1,"caption_template":"_CAPTION_","label":"图2.1.1 RESTful 的公式","attributes":{},"skip":false,"key":"1.3.1.1"},{"backlink":"doc/second/01.html#fig1.3.1.2","level":"1.3.1","list_caption":"Figure: 图2.1.2 两种API的设计风格","alt":"图2.1.2 两种API的设计风格","nro":52,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktdaqhzifj31e80iqq6z.jpg","index":2,"caption_template":"_CAPTION_","label":"图2.1.2 两种API的设计风格","attributes":{},"skip":false,"key":"1.3.1.2"},{"backlink":"doc/second/01.html#fig1.3.1.3","level":"1.3.1","list_caption":"Figure: 图2.1.3 HTTP动词与资源操作的对应","alt":"图2.1.3 HTTP动词与资源操作的对应","nro":53,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktdvg7g10j31iq0bedh0.jpg","index":3,"caption_template":"_CAPTION_","label":"图2.1.3 HTTP动词与资源操作的对应","attributes":{},"skip":false,"key":"1.3.1.3"},{"backlink":"doc/second/01.html#fig1.3.1.4","level":"1.3.1","list_caption":"Figure: 图2.1.4 HTTP状态码与API交互状态的对应","alt":"图2.1.4 HTTP状态码与API交互状态的对应","nro":54,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktdxagfyaj31iq09kabp.jpg","index":4,"caption_template":"_CAPTION_","label":"图2.1.4 HTTP状态码与API交互状态的对应","attributes":{},"skip":false,"key":"1.3.1.4"},{"backlink":"doc/second/01.html#fig1.3.1.5","level":"1.3.1","list_caption":"Figure: 图2.1.5 两种常见的结构化数据","alt":"图2.1.5 两种常见的结构化数据","nro":55,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktem5src8j310y0cgac7.jpg","index":5,"caption_template":"_CAPTION_","label":"图2.1.5 两种常见的结构化数据","attributes":{},"skip":false,"key":"1.3.1.5"},{"backlink":"doc/second/02.html#fig1.3.2.1","level":"1.3.2","list_caption":"Figure: 图2.2.1 项目的初始结构","alt":"图2.2.1 项目的初始结构","nro":56,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkuqu29umxj30ly0hiwft.jpg","index":1,"caption_template":"_CAPTION_","label":"图2.2.1 项目的初始结构","attributes":{},"skip":false,"key":"1.3.2.1"},{"backlink":"doc/second/02.html#fig1.3.2.2","level":"1.3.2","list_caption":"Figure: 图2.2.2 新的项目结构","alt":"图2.2.2 新的项目结构","nro":57,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkuqyoz03rj30jg0lwjt1.jpg","index":2,"caption_template":"_CAPTION_","label":"图2.2.2 新的项目结构","attributes":{},"skip":false,"key":"1.3.2.2"},{"backlink":"doc/second/02.html#fig1.3.2.3","level":"1.3.2","list_caption":"Figure: 图2.2.3 HTTP动词与资源操作动作的映射","alt":"图2.2.3 HTTP动词与资源操作动作的映射","nro":58,"url":"https://tva1.sinaimg.cn/large/0081Kckwgy1gktdvg7g10j31iq0bedh0.jpg","index":3,"caption_template":"_CAPTION_","label":"图2.2.3 HTTP动词与资源操作动作的映射","attributes":{},"skip":false,"key":"1.3.2.3"},{"backlink":"doc/second/02.html#fig1.3.2.4","level":"1.3.2","list_caption":"Figure: 图2.2.4 请求与代码的映射","alt":"图2.2.4 请求与代码的映射","nro":59,"url":"https://tva1.sinaimg.cn/large/0081Kckwly1gkuqh5qfmwj30yi0gugnx.jpg","index":4,"caption_template":"_CAPTION_","label":"图2.2.4 请求与代码的映射","attributes":{},"skip":false,"key":"1.3.2.4"}]},"title":"springboot-learning-for-noob","language":"zh-hans","links":{"sidebar":{"我的博客":"https://blog.liangyueyong.cn"}},"gitbook":"*","description":"给小白的第一本SpringBoot编程书"},"file":{"path":"doc/second/02.md","mtime":"2020-11-19T13:41:45.908Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-19T13:41:53.568Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
